@@ -1,171 +1,6 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+@extends('app')
 
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Sikkha</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="manifest" href="site.html">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="{{ asset('asset/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/fontawesome-all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/meanmenu.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/default.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/responsive.css') }}">
-</head>
-
-<body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-    <!-- Add your site or application content here -->
-    <!-- header-start -->
-    <header id="home">
-        <div class="header-area">
-            <!-- header-top -->
-            <div class="header-top primary-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-12">
-                            <div class="header-contact-info d-flex">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        <img src="img/logo/logo.png" alt="">
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /end header-top -->
-            <!-- header-bottom -->
-            <div class="header-bottom-area header-sticky" style="transition: .6s;">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-2 col-lg-2 col-md-6 col-6">
-
-                        </div>
-                        <div class="col-xl-10 col-lg-10 col-md-6 col-6">
-                            <div class="header-bottom-icon f-right">
-
-                            </div>
-                            <div class="main-menu f-right">
-                                <nav id="mobile-menu" style="display: block;">
-                                    <ul>
-                                        <li>
-                                            <a href="#home">Profil</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="index.html">Home style 1</a>
-                                                </li>
-                                                <li>
-                                                    <a href="index_2.html">Home style 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="index_3.html">Home style 3</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#about">AKADEMIK</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="about_us.html">About Us</a>
-                                                </li>
-                                                <li>
-                                                    <a href="advisors.html">Advisors</a>
-                                                </li>
-                                                <li>
-                                                    <a href="advisors_details.html">Advisors Details</a>
-                                                </li>
-                                                <li>
-                                                    <a href="faq.html">FAQ</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#about">BERITA</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="events_01.html">Events 01</a>
-                                                </li>
-                                                <li>
-                                                    <a href="events_02.html">Events 02</a>
-                                                </li>
-                                                <li>
-                                                    <a href="event_details.html">Events Details</a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop_pages.html">Shop</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="course_01.html">BIAYA KULIAH</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="course_01.html">Courses 01</a>
-                                                </li>
-                                                <li>
-                                                    <a href="course_02.html">Courses 02</a>
-                                                </li>
-                                                <li>
-                                                    <a href="course_03.html">Courses 03</a>
-                                                </li>
-                                                <li>
-                                                    <a href="course_details.html">Course Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="events_01.html">JALUR PENDAFTARAN</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="grid_news.html">Blog 3 Column</a>
-                                                </li>
-                                                <li>
-                                                    <a href="standard_blog.html">Blog Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="news_details.html">Blog Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mobile-menu"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /end header-bottom -->
-        </div>
-    </header>
-    <!-- header-end -->
-    <!-- slider-start -->
+@section('content')
     <div class="slider-area pos-relative">
         <div class="slider-active">
             <div class="single-slider slider-height d-flex align-items-center justify-content-center"
@@ -175,7 +10,8 @@
                         <div class="col-xl-9 col-md-12">
                             <div class="slider-content slider-content-2">
                                 <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">
-                                    <span>Program Studi</span><br>Informatika</h1>
+                                    <span>Program Studi</span><br>Informatika
+                                </h1>
                                 <p data-animation="fadeInUp" data-delay=".4s">Mencetak Generasi Maju, Menuju Generasi
                                     Emas.</p>
                                 <button class="theme-btn" data-animation="fadeInUp" data-delay=".6s"><span
@@ -192,7 +28,8 @@
                         <div class="col-xl-8 col-md-12 offset-xl-2">
                             <div class="slider-content slider-content-2 text-center">
                                 <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">
-                                    <span>Admition Going On</span><br>Eduara University</h1>
+                                    <span>Admition Going On</span><br>Eduara University
+                                </h1>
                                 <p data-animation="fadeInUp" data-delay=".4s">Sorem ipsum dolor sit amet consectetur
                                     adipisicing elit sed do eiusmod tempor <br> incididunt ut labore et dolore magna
                                     aliqua enim ad minime.</p>
@@ -210,7 +47,8 @@
                         <div class="col-xl-9 col-md-12">
                             <div class="slider-content slider-content-2">
                                 <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">
-                                    <span>Admition Going On</span><br>Eduara University</h1>
+                                    <span>Admition Going On</span><br>Eduara University
+                                </h1>
                                 <p data-animation="fadeInUp" data-delay=".4s">Sorem ipsum dolor sit amet consectetur
                                     adipisicing elit sed do eiusmod tempor <br> incididunt ut labore et dolore magna
                                     aliqua enim ad minime.</p>
@@ -896,7 +734,7 @@
         </div>
     </div>
     <!-- testimonials end -->
-    
+
     <!-- counter end -->
     <!-- latest_news start -->
     <div id="blog" class="latest_news-area gray-bg pt-100 pb-70">
@@ -975,75 +813,5 @@
             </div>
         </div>
     </div>
-
-    <div class="col-xl-3 col-lg-4  col-md-6">
-        <div class="footer-widget mb-30">
-            <div class="footer-heading">
-                <h1>Contact Us</h1>
-            </div>
-            <div class="footer-contact-list">
-                <div class="single-footer-contact-info">
-                    <span class="ti-headphone "></span>
-                    <span class="footer-contact-list-text">+003 (1234) 7894</span>
-                </div>
-                <div class="single-footer-contact-info">
-                    <span class="ti-email "></span>
-                    <span class="footer-contact-list-text">youremail@gmail.com</span>
-                </div>
-                <div class="single-footer-contact-info">
-                    <span class="ti-location-pin"></span>
-                    <span class="footer-contact-list-text">123 New Street, 6th Floor, New York</span>
-                </div>
-            </div>
-            <!-- <div class="opening-time">
-                                    <span>Opening Hour</span>
-                                    <span class="opening-date">
-                                        Sun - Sat : 10:00 am - 05:00 pm
-                                    </span>
-                                </div> -->
-        </div>
-    </div>
-    </div>
-    </div>
-    <div class="footer-bottom pt-25 pb-25">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="footer-copyright text-center">
-                        <span><a>&copy; Copyright by Informatika</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </footer>
-    <!-- footer end -->
-
-
-    <!-- JS here -->
-    <script src="{{ 'asset/js/vendor/modernizr-3.5.0.min.js' }}"></script>
-    <script src="{{ 'asset/js/vendor/jquery-1.12.4.min.js' }}"></script>
-    <script src="{{ 'asset/js/popper.min.js' }}"></script>
-    <script src="{{ 'asset/js/bootstrap.min.js' }}"></script>
-    <script src="{{ 'asset/js/owl.carousel.min.js' }}"></script>
-    <script src="{{ 'asset/js/isotope.pkgd.min.js' }}"></script>
-    <script src="{{ 'asset/js/one-page-nav-min.js' }}"></script>
-    <script src="{{ 'asset/js/slick.min.js' }}"></script>
-    <script src="{{ 'asset/js/ajax-form.js' }}"></script>
-    <script src="{{ 'asset/js/wow.min.js' }}"></script>
-    <script src="{{ 'asset/js/jquery.meanmenu.min.js' }}"></script>
-    <script src="{{ 'asset/js/jquery.scrollUp.min.js' }}"></script>
-    <script src="{{ 'asset/js/jquery.barfiller.js' }}"></script>
-    <script src="{{ 'asset/js/imagesloaded.pkgd.min.js' }}"></script>
-    <script src="{{ 'asset/js/jquery.counterup.min.js' }}"></script>
-    <script src="{{ 'asset/js/waypoints.min.js' }}"></script>
-    <script src="{{ 'asset/js/jquery.magnific-popup.min.js' }}"></script>
-    <script src="{{ 'asset/js/plugins.js' }}"></script>
-    <script src="{{ 'asset/js/main.js' }}"></script>
-
-</body>
-
-
-</html>
+@endsection
+    

@@ -12,10 +12,16 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
+
 
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextareaColumn;
 use Filament\Tables\Columns\TextInputColumn;
+use Filament\Forms\Components\FileUpload;
+use Filament\Tables\Columns\ImageColumn;
 
 class BeritaResource extends Resource
 {
@@ -31,8 +37,10 @@ class BeritaResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-                TextInput::make('deskripsi')
+                TextArea::make('deskripsi')
                     ->required(),
+
+                FileUpload::make('gambar')
             ]);
     }
 
@@ -42,12 +50,14 @@ class BeritaResource extends Resource
             ->columns([
                 TextColumn::make('judul'),
                 TextColumn::make('deskripsi'),
+                ImageColumn::make('gambar'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

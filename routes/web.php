@@ -4,7 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('layouts/home');
 });
 
 // Route::get('login', [AdminController::class, 'login'])->name('login');
