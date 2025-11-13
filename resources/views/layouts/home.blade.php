@@ -76,8 +76,7 @@
                             sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <p>Horem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut
                             labore et dolore magna aliqua Ut enim ad minim veniam,quis nostrude</p>
-                        <button class="theme-btn blue-bg-border mt-20"><span class="btn-text">admit
-                                now</span></button>
+                        <button class="theme-btn blue-bg-border mt-20"><span class="btn-text">Baca Selengkapnya</span></button>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-5">
@@ -127,6 +126,91 @@
         </div>
     </div>
     <!-- about end -->
+
+    <!-- pengumuman-start -->
+    <div id="blog" class="latest_news-area gray-bg pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 col-md-8 offset-md-2">
+                    <div class="section-title mb-50 text-center">
+                        <div class="section-title-heading mb-20">
+                            <h1 class="primary-color">Pengumuman</h1>
+                        </div>
+                        <div class="section-title-para">
+                            <p class="gray-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras
+                                mollis scelerisqu Nullam arcu liquam here was consequat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="blog-wrapper mb-30">
+                        <div class="blog-thumb mb-25">
+                            <a href="news_details.html"><img src=" {{asset('asset/img/blog/blog_thumb_1.jpg')}}" alt=""></a>
+                            <span class="blog-category">news</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>Auguest 25, 2018</span>
+                            </div>
+                            <h5><a href="news_details.html">Some say education is the process of gaining information is
+                                    nation.</a></h5>
+                            <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
+                            <div class="read-more-btn">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="blog-wrapper mb-30">
+                        <div class="blog-thumb mb-25">
+                            <a href="news_details.html"><img src=" {{asset('asset/img/blog/blog_thumb_2.jpg')}} " alt=""></a>
+                            <span class="blog-category">news</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>Auguest 25, 2018</span>
+                            </div>
+                            <h5><a href="news_details.html">Education gives us a knowledge of the world around us and
+                                    changes </a></h5>
+                            <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
+                            <div class="read-more-btn">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="blog-wrapper mb-30">
+                        <div class="blog-thumb mb-25">
+                            <a href="news_details.html"><img src=" {{ asset('asset/img/blog/blog_thumb_3.jpg') }}" alt=""></a>
+                            <span class="blog-category">news</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>Auguest 25, 2018</span>
+                            </div>
+                            <h5><a href="news_details.html">One thing I wish I can do is, to provide education for all
+                                    child left behind </a></h5>
+                            <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
+                            <div class="read-more-btn">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- pengumuman-end -->
+
+
+
+
+
+
     <!-- courses start -->
     <div id="courses" class="courses-area courses-bg-height pt-100 pb-70"
         style="background-image: url( {{ asset('asset/img/courses/courses_bg.png')}} );">
@@ -446,7 +530,7 @@
                 <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="section-title mb-50 text-center">
                         <div class="section-title-heading mb-20">
-                            <h1 class="white-color">Event</h1>
+                            <h1 class="white-color">Agenda</h1>
                         </div>
                         <div class="section-title-para">
                             <p class="white-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras
@@ -736,82 +820,6 @@
     <!-- testimonials end -->
 
     <!-- counter end -->
-    <!-- latest_news start -->
-    <div id="blog" class="latest_news-area gray-bg pt-100 pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 offset-xl-3 col-md-8 offset-md-2">
-                    <div class="section-title mb-50 text-center">
-                        <div class="section-title-heading mb-20">
-                            <h1 class="primary-color">Berita Terbaru</h1>
-                        </div>
-                        <div class="section-title-para">
-                            <p class="gray-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras
-                                mollis scelerisqu Nullam arcu liquam here was consequat.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog-wrapper mb-30">
-                        <div class="blog-thumb mb-25">
-                            <a href="news_details.html"><img src="img/blog/blog_thumb_1.jpg" alt=""></a>
-                            <span class="blog-category">news</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span>Auguest 25, 2018</span>
-                            </div>
-                            <h5><a href="news_details.html">Some say education is the process of gaining information is
-                                    nation.</a></h5>
-                            <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
-                            <div class="read-more-btn">
-                                <button>Read more</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog-wrapper mb-30">
-                        <div class="blog-thumb mb-25">
-                            <a href="news_details.html"><img src="img/blog/blog_thumb_2.jpg" alt=""></a>
-                            <span class="blog-category">news</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span>Auguest 25, 2018</span>
-                            </div>
-                            <h5><a href="news_details.html">Education gives us a knowledge of the world around us and
-                                    changes </a></h5>
-                            <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
-                            <div class="read-more-btn">
-                                <button>Read more</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog-wrapper mb-30">
-                        <div class="blog-thumb mb-25">
-                            <a href="news_details.html"><img src=" {{ asset('asset/img/blog/blog_thumb_3.jpg') }}" alt=""></a>
-                            <span class="blog-category">news</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span>Auguest 25, 2018</span>
-                            </div>
-                            <h5><a href="news_details.html">One thing I wish I can do is, to provide education for all
-                                    child left behind </a></h5>
-                            <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
-                            <div class="read-more-btn">
-                                <button>Read more</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 @endsection
     
