@@ -4,10 +4,10 @@
     <div class="slider-area pos-relative">
         <div class="slider-active">
             <div class="single-slider slider-height d-flex align-items-center justify-content-center"
-                style="background-image: url(img/slider/slider_bg_1.jpg);">
+                style="background-image: url( {{ asset('asset/img/slider/slider_bg_1.jpg') }});">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-9 col-md-12">
+                        <div class="col-xl-9 col-md-12">    
                             <div class="slider-content slider-content-2">
                                 <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">
                                     <span>Program Studi</span><br>Informatika
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="single-slider slider-height d-flex align-items-center justify-content-center"
-                style="background-image: url(img/slider/2.jpg);">
+                style="background-image: url( {{ asset('asset/img/slider/2.jpg') }} );">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-8 col-md-12 offset-xl-2">
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="single-slider slider-height d-flex align-items-center justify-content-center"
-                style="background-image: url(img/slider/3.jpg);">
+                style="background-image: url( {{ asset('asset/img/slider/3.jpg')}} );">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-9 col-md-12">
@@ -68,7 +68,7 @@
             <div class="row">
                 <div class="col-xl-7 col-lg-7">
                     <div class="about-title-section mb-30">
-                        <h1>Welcome To Our Sikkha</h1>
+                        <h1>Sejarah Program Studi Informatika</h1>
                         <p>Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure repreh nderit in voluptate
@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-xl-5 col-lg-5">
                     <div class="about-right-img mb-30">
-                        <img src="img/about/about-right.png" alt="">
+                        <img src=" {{ asset('asset/img/about/about-right.png')}} " alt="">
                     </div>
                 </div>
             </div>
@@ -129,13 +129,13 @@
     <!-- about end -->
     <!-- courses start -->
     <div id="courses" class="courses-area courses-bg-height pt-100 pb-70"
-        style="background-image: url(img/courses/courses_bg.png);">
+        style="background-image: url( {{ asset('asset/img/courses/courses_bg.png')}} );">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="section-title mb-50 text-center">
                         <div class="section-title-heading mb-20">
-                            <h1 class="white-color">Our Latest Courses</h1>
+                            <h1 class="white-color">Mata Kuliah Prodi</h1>
                         </div>
                         <div class="section-title-para">
                             <p class="white-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras
@@ -149,11 +149,11 @@
                     <div class="col-xl-12">
                         <div class="courses-wrapper course-radius-none mb-30">
                             <div class="courses-thumb">
-                                <a href="course_details.html"><img src="img/courses/single_courses_thumb_01.jpg"
+                                <a href="course_details.html"><img src=" {{asset('asset/img/courses/single_courses_thumb_01.jpg')}} "
                                         alt=""></a>
                             </div>
                             <div class="courses-author">
-                                <img src="img/courses/coursesauthor1.png" alt="">
+                                <img src=" {{asset('asset/img/courses/coursesauthor1.png')}}  " alt="">
                             </div>
                             <div class="course-main-content clearfix">
                                 <div class="courses-content">
@@ -191,11 +191,11 @@
                     <div class="col-xl-12">
                         <div class="courses-wrapper course-radius-none mb-30">
                             <div class="courses-thumb">
-                                <a href="course_details.html"><img src="img/courses/single_courses_thumb_02.jpg"
+                                <a href="course_details.html"><img src=" {{asset('asset/img/courses/single_courses_thumb_02.jpg')}} "
                                         alt=""></a>
                             </div>
                             <div class="courses-author">
-                                <img src="img/courses/coursesauthor1.png" alt="">
+                                <img src=" {{asset('asset/img/courses/coursesauthor1.png')}}" alt="">
                             </div>
                             <div class="course-main-content clearfix">
                                 <div class="courses-content">
@@ -233,11 +233,11 @@
                     <div class="col-xl-12">
                         <div class="courses-wrapper course-radius-none mb-30">
                             <div class="courses-thumb">
-                                <a href="course_details.html"><img src="img/courses/single_courses_thumb_03.jpg"
+                                <a href="course_details.html"><img src=" {{ asset('asset/img/courses/single_courses_thumb_03.jpg')}} "
                                         alt=""></a>
                             </div>
                             <div class="courses-author">
-                                <img src="img/courses/coursesauthor1.png" alt="">
+                                <img src="{{ asset('asset/img/courses/coursesauthor1.png')}}" alt="">
                             </div>
                             <div class="course-main-content clearfix">
                                 <div class="courses-content">
@@ -275,11 +275,11 @@
                     <div class="col-xl-12">
                         <div class="courses-wrapper course-radius-none mb-30">
                             <div class="courses-thumb">
-                                <a href="course_details.html"><img src="img/courses/single_courses_thumb_04.jpg"
+                                <a href="course_details.html"><img src=" {{asset('asset/img/courses/single_courses_thumb_04.jpg')}} "
                                         alt=""></a>
                             </div>
                             <div class="courses-author">
-                                <img src="img/courses/coursesauthor1.png" alt="">
+                                <img src=" {{asset('asset/img/courses/coursesauthor1.png')}} " alt="">
                             </div>
                             <div class="course-main-content clearfix">
                                 <div class="courses-content">
@@ -326,7 +326,7 @@
                 <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="section-title mb-50 text-center">
                         <div class="section-title-heading mb-20">
-                            <h1 class="primary-color">Our Experience Advisors</h1>
+                            <h1 class="primary-color">Dosen Program Studi</h1>
                         </div>
                         <div class="section-title-para">
                             <p class="gray-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras
@@ -340,7 +340,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="team-wrapper mb-30">
                             <div class="team-thumb">
-                                <img src="img/team/teammember1.jpg" alt="">
+                                <img src=" {{asset('asset/img/team/teammember1.jpg')}} " alt="">
                             </div>
                             <div class="team-social-info text-center">
                                 <div class="team-social-para">
@@ -364,7 +364,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="team-wrapper mb-30">
                             <div class="team-thumb">
-                                <img src="img/team/teammember2.jpg" alt="">
+                                <img src=" {{asset('asset/img/team/teammember2.jpg')}} " alt="">
                             </div>
                             <div class="team-social-info text-center">
                                 <div class="team-social-para">
@@ -388,7 +388,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="team-wrapper mb-30">
                             <div class="team-thumb">
-                                <img src="img/team/teammember3.jpg" alt="">
+                                <img src=" {{asset('asset/img/team/teammember3.jpg')}} " alt="">
                             </div>
                             <div class="team-social-info text-center">
                                 <div class="team-social-para">
@@ -412,7 +412,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="team-wrapper mb-30">
                             <div class="team-thumb">
-                                <img src="img/team/teammember4.jpg" alt="">
+                                <img src="{{asset('asset/img/team/teammember4.jpg')}} " alt="">
                             </div>
                             <div class="team-social-info text-center">
                                 <div class="team-social-para">
@@ -440,13 +440,13 @@
     <!-- team end -->
     <!-- events start -->
     <div id="events" class="events-area events-bg-height pt-100 pb-95"
-        style="background-image: url(img/courses/courses_bg.png)">
+        style="background-image: url( {{asset('asset/img/courses/courses_bg.png')}} )">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="section-title mb-50 text-center">
                         <div class="section-title-heading mb-20">
-                            <h1 class="white-color">Upcoming Events</h1>
+                            <h1 class="white-color">Event</h1>
                         </div>
                         <div class="section-title-para">
                             <p class="white-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras
@@ -462,7 +462,7 @@
                             <div class="events-wrapper">
                                 <div class="events-inner d-flex">
                                     <div class="events-thumb">
-                                        <img src="img/events/eventsthumb1.png" alt="">
+                                        <img src=" {{asset('asset/img/events/eventsthumb1.png')}}  " alt="">
                                     </div>
                                     <div class="events-text white-bg">
                                         <div class="event-text-heading mb-20">
@@ -495,7 +495,7 @@
                             <div class="events-wrapper">
                                 <div class="events-inner d-flex">
                                     <div class="events-thumb">
-                                        <img src="img/events/eventsthumb2.png" alt="">
+                                        <img src="{{asset('asset/img/events/eventsthumb2.png')}}" alt="">
                                     </div>
                                     <div class="events-text white-bg">
                                         <div class="event-text-heading mb-20">
@@ -530,7 +530,7 @@
                             <div class="events-wrapper">
                                 <div class="events-inner d-flex">
                                     <div class="events-thumb">
-                                        <img src="img/events/eventsthumb3.png" alt="">
+                                        <img src="{{asset('asset/img/events/eventsthumb3.png')}}" alt="">
                                     </div>
                                     <div class="events-text white-bg">
                                         <div class="event-text-heading mb-20">
@@ -563,7 +563,7 @@
                             <div class="events-wrapper">
                                 <div class="events-inner d-flex">
                                     <div class="events-thumb">
-                                        <img src="img/events/eventsthumb4.png" alt="">
+                                        <img src=" {{asset('asset/img/events/eventsthumb4.png')}} " alt="">
                                     </div>
                                     <div class="events-text white-bg">
                                         <div class="event-text-heading mb-20">
@@ -614,7 +614,7 @@
                 <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="section-title mb-50 text-center">
                         <div class="section-title-heading mb-20">
-                            <h1 class="primary-color">What Our Students Say</h1>
+                            <h1 class="primary-color">Testimoni</h1>
                         </div>
                         <div class="section-title-para">
                             <p class="gray-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras
@@ -743,7 +743,7 @@
                 <div class="col-xl-6 offset-xl-3 col-md-8 offset-md-2">
                     <div class="section-title mb-50 text-center">
                         <div class="section-title-heading mb-20">
-                            <h1 class="primary-color">Latest News</h1>
+                            <h1 class="primary-color">Berita Terbaru</h1>
                         </div>
                         <div class="section-title-para">
                             <p class="gray-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras
@@ -794,7 +794,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="blog-wrapper mb-30">
                         <div class="blog-thumb mb-25">
-                            <a href="news_details.html"><img src="img/blog/blog_thumb_3.jpg" alt=""></a>
+                            <a href="news_details.html"><img src=" {{ asset('asset/img/blog/blog_thumb_3.jpg') }}" alt=""></a>
                             <span class="blog-category">news</span>
                         </div>
                         <div class="blog-content">
