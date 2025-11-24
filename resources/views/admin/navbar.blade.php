@@ -1,26 +1,49 @@
-@section('navbar')
-    <nav class="col-md-3 col-lg-2 d-md-block sidebar">
-        <h4 class="text-white text-center mb-4">Bank Sampah</h4>
-        <a href="index.php" class="<?php echo !isset($_GET['page']) ? 'active' : ''; ?>">
-            <i class="bi bi-speedometer2"></i> Dashboard
-        </a>
-        <a href="index.php?page=transaksi" class="<?php echo isset($_GET['page']) && $_GET['page'] == 'transaksi' ? 'active' : ''; ?>">
-            <i class="bi bi-cash-coin"></i> Transaksi
-        </a>
-        <a href="index.php?page=data_transaksi" class="<?php echo isset($_GET['page']) && $_GET['page'] == 'data_transaksi' ? 'active' : ''; ?>">
-            <i class="bi bi-cash-coin"></i> Data Transaksi
-        </a>
-        <a href="index.php?page=anggota" class="<?php echo isset($_GET['page']) && $_GET['page'] == 'anggota' ? 'active' : ''; ?>">
-            <i class="bi bi-people"></i> Data Anggota
-        </a>
-        <a href="index.php?page=sampah" class="<?php echo isset($_GET['page']) && $_GET['page'] == 'sampah' ? 'active' : ''; ?>">
-            <i class="bi bi-recycle"></i> Jenis Sampah
-        </a>
-        <a href="index.php?page=laporan" class="<?php echo isset($_GET['page']) && $_GET['page'] == 'laporan' ? 'active' : ''; ?>">
-            <i class="bi bi-file-earmark-text"></i> Laporan
-        </a>
-        <a href="logout.php">
-            <i class="bi bi-box-arrow-right"></i> Logout
-        </a>
-    </nav>
+@extends('admin.app')
+@section('admin.navbar')
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Admin Panel</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+
+                <!-- Data Berita -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#berita">Data Berita Kampus</a>
+                </li>
+
+                <!-- Mata Kuliah -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#matkul">Data Mata Kuliah</a>
+                </li>
+
+                <!-- Dosen -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#dosen">Data Dosen</a>
+                </li>
+
+            </ul>
+
+            <!-- Akun admin -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Profil</a></li>
+                        <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
 @endsection
