@@ -20,6 +20,10 @@ Route::get('/adm/login', function () {
     return view('admin/login');
 });
 
+Route::get('/adm/index', function () {
+    return view('admin/index');
+})->middleware('auth:admin');
+
 Route::get('login', [AdminController::class, 'login'])->name('login');
 Route::post('login', [AdminController::class, 'login_action'])->name('login.action');
 Route::post('password', [AdminController::class, 'password_action'])->name('password.action');
