@@ -40,7 +40,7 @@
                                 <nav id="mobile-menu" style="display: block;">
                                     <ul>
                                         <li>
-                                            <a href="#home">Profil</a>
+                                            <a href="{{route('home')}}">Profil</a>
                                             {{-- <ul class="submenu">
                                                 <li>
                                                     <a href="index.html">Home style 1</a>
@@ -57,7 +57,7 @@
                                             <a href="#about">AKADEMIK</a>
                                             <ul class="submenu">
                                                 <li>
-                                                    <a href="about_us.html">Mata Kuliah</a>
+                                                    <a href="{{route('matkul')}}">Mata Kuliah</a>
                                                 </li>
                                                 <li>
                                                     <a href="{{ route('akademik') }}">Dosen Pengampu</a>
@@ -74,7 +74,7 @@
                                             <a href="#about">BERITA</a>
                                             <ul class="submenu">
                                                 <li>
-                                                    <a href="events_01.html">Berita</a>
+                                                    <a href="{{route('berita')}}">Berita</a>
                                                 </li>
                                                 <li>
                                                     <a href="events_02.html">Pengumuman</a>
@@ -91,10 +91,10 @@
                                             <a href="course_01.html">BIAYA KULIAH</a>
                                             <ul class="submenu">
                                                 <li>
-                                                    <a href="course_01.html">Beasiswa</a>
+                                                    <a href="{{route('biaya_r')}}#beasiswa">Beasiswa</a>
                                                 </li>
                                                 <li>
-                                                    <a href="course_02.html">Reguler</a>
+                                                    <a href="{{route('biaya_r')}}">Reguler</a>
                                                 </li>
                                                 {{-- <li>
                                                     <a href="course_03.html">Courses 03</a>

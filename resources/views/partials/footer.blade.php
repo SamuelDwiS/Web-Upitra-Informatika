@@ -36,12 +36,12 @@
                               </div>
                               <div class="footer-menu clearfix">
                                   <ul>
-                                      <li><a href="#">Privacy Policy</a></li>
-                                      <li><a href="#">Condition</a></li>
-                                      <li><a href="#">Support</a></li>
-                                      <li><a href="#">Consultation</a></li>
-                                      <li><a href="#">Team Member</a></li>
-                                      <li><a href="#">Our Services</a></li>
+                                      <li><a href="#">Home</a></li>
+                                      <li><a href="#">svbsvjso</a></li>
+                                      <li><a href="{{route('akademik')}}">Dosen Pengampu</a></li>
+                                      <li><a href="#">Matkul</a></li>
+                                      <li><a href="#">Berita</a></li>
+                                      <li><a href="#">Pengumuman</a></li>
                                       <li><a href="#">About Us</a></li>
                                       <li><a href="#">Contact Us</a></li>
                                       <li><a href="#">Who we are</a></li>
@@ -91,15 +91,15 @@
                               <div class="footer-contact-list">
                                   <div class="single-footer-contact-info">
                                       <span class="ti-headphone "></span>
-                                      <span class="footer-contact-list-text">+003 (1234) 7894</span>
+                                      <span class="footer-contact-list-text">+62 811 290 7500</span>
                                   </div>
                                   <div class="single-footer-contact-info">
                                       <span class="ti-email "></span>
-                                      <span class="footer-contact-list-text">youremail@gmail.com</span>
+                                      <span class="footer-contact-list-text">admission@upitra.ac.id</span>
                                   </div>
                                   <div class="single-footer-contact-info">
                                       <span class="ti-location-pin"></span>
-                                      <span class="footer-contact-list-text">123 New Street, 6th Floor, New York</span>
+                                      <span class="footer-contact-list-text">Jl.Duwet No.1 Karangasem Laweyan Surakarta 57145</span>
                                   </div>
                               </div>
                               <!-- <div class="opening-time">

@@ -7,7 +7,7 @@
                 style="background-image: url( {{ asset('asset/img/slider/slider_bg_1.jpg') }});">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-9 col-md-12">    
+                        <div class="col-xl-9 col-md-12">
                             <div class="slider-content slider-content-2">
                                 <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">
                                     <span>Program Studi</span><br>Informatika
@@ -820,6 +820,5 @@
     <!-- testimonials end -->
 
     <!-- counter end -->
-    
+
 @endsection
-    
