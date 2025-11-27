@@ -17,9 +17,9 @@ Route::get('/about', function () {
     return view('layouts/about');
 });
 
-Route::get('/akademik', function(){
-    return view('layouts/akademik');
-})->name('akademik');
+Route::get('/dosen', function(){
+    return view('layouts/dosen');
+})->name('dosen');
 
 
 Route::get('/matkul', function(){

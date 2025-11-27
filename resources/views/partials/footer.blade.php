@@ -38,7 +38,7 @@
                                   <ul>
                                       <li><a href="#">Home</a></li>
                                       <li><a href="#">svbsvjso</a></li>
-                                      <li><a href="{{route('akademik')}}">Dosen Pengampu</a></li>
+                                      <li><a href="{{route('dosen')}}">Dosen Pengampu</a></li>
                                       <li><a href="#">Matkul</a></li>
                                       <li><a href="#">Berita</a></li>
                                       <li><a href="#">Pengumuman</a></li>

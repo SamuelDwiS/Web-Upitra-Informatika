@@ -49,19 +49,7 @@
                         <div class="team-thumb">
                             <img src="{{asset('asset/bg.jpg')}}" alt="">
                         </div>
-                        <div class="team-social-info text-center">
-                            <div class="team-social-para">
-                                <p>Belis nisl adipiscing sapien malesu diame lacus eget erats</p>
-                            </div>
-                            <div class="team-social-icon-list">
-                                <ul>
-                                    <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                    <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                    <li><a href="#"><span class="ti-google"></span></a></li>
-                                    <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+
                         <div class="team-teacher-info text-center">
                             <h1>Nama Dosen 1</h1>
                             <h2>NIDN</h2>
@@ -73,19 +61,7 @@
                         <div class="team-thumb">
                             <img src="{{asset('asset/bg.jpg')}}" alt="">
                         </div>
-                        <div class="team-social-info text-center">
-                            <div class="team-social-para">
-                                <p>Belis nisl adipiscing sapien malesu diame lacus eget erats</p>
-                            </div>
-                            <div class="team-social-icon-list">
-                                <ul>
-                                    <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                    <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                    <li><a href="#"><span class="ti-google"></span></a></li>
-                                    <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+
                         <div class="team-teacher-info text-center">
                             <h1>Nama Dosen 2</h1>
                             <h2>NIDN</h2>
@@ -97,19 +73,7 @@
                         <div class="team-thumb">
                             <img src="{{asset('asset/bg.jpg')}}" alt="">
                         </div>
-                        <div class="team-social-info text-center">
-                            <div class="team-social-para">
-                                <p>Belis nisl adipiscing sapien malesu diame lacus eget erats</p>
-                            </div>
-                            <div class="team-social-icon-list">
-                                <ul>
-                                    <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                    <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                    <li><a href="#"><span class="ti-google"></span></a></li>
-                                    <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+
                         <div class="team-teacher-info text-center">
                             <h1>Nama Dosen 3</h1>
                             <h2>NIDN</h2>
@@ -122,19 +86,7 @@
                         <div class="team-thumb">
                             <img src="{{asset('asset/bg.jpg')}}" alt="">
                         </div>
-                        <div class="team-social-info text-center">
-                            <div class="team-social-para">
-                                <p>Belis nisl adipiscing sapien malesu diame lacus eget erats</p>
-                            </div>
-                            <div class="team-social-icon-list">
-                                <ul>
-                                    <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                    <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                    <li><a href="#"><span class="ti-google"></span></a></li>
-                                    <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+
                         <div class="team-teacher-info text-center">
                             <h1>Nama Dosen 4</h1>
                             <h2>NIDN</h2>
@@ -148,19 +100,7 @@
                         <div class="team-thumb">
                             <img src="{{asset('asset/bg.jpg')}}" alt="">
                         </div>
-                        <div class="team-social-info text-center">
-                            <div class="team-social-para">
-                                <p>Belis nisl adipiscing sapien malesu diame lacus eget erats</p>
-                            </div>
-                            <div class="team-social-icon-list">
-                                <ul>
-                                    <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                    <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                    <li><a href="#"><span class="ti-google"></span></a></li>
-                                    <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        
                         <div class="team-teacher-info text-center">
                             <h1>Nama Dosen 5</h1>
                             <h2>NIDN</h2>

@@ -60,7 +60,7 @@
                                                     <a href="{{route('matkul')}}">Mata Kuliah</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('akademik') }}">Dosen Pengampu</a>
+                                                    <a href="{{ route('dosen') }}">Dosen Pengampu</a>
                                                 </li>
                                                 {{-- <li>
                                                     <a href="advisors_details.html">Advisors Details</a>

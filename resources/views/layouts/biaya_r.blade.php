@@ -12,7 +12,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-xl-7 col-lg-7">
+                <div class="col-xl-8 col-lg-8">
                     <div class="about-title-section mb-30">
                         <h1>Reguler</h1>
                         <p>Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure repreh nderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occcu idatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -28,7 +28,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-xl-7 col-lg-7">
+                <div class="col-xl-8 col-lg-8">
                     <div class="about-title-section mb-30">
                         <h1>Beasiswa</h1>
                         <p>Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure repreh nderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occcu idatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

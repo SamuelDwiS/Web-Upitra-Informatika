@@ -41,9 +41,7 @@
                                         <div class="course-title-3">
                                             <h1><a href="course_details.html">Matkul 1</a></h1>
                                         </div>
-                                        {{-- <div class="courses-pricing-3">
-                                            <span>$24.99</span>
-                                        </div> --}}
+
                                     </div>
                                     <div class="courses-para mt-15">
                                         <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.</p>
@@ -67,9 +65,7 @@
                                         <div class="course-title-3">
                                             <h1><a href="course_details.html">Matkul 2</a></h1>
                                         </div>
-                                        {{-- <div class="courses-pricing-3">
-                                            <span>$24.99</span>
-                                        </div> --}}
+
                                     </div>
                                     <div class="courses-para mt-15">
                                         <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.</p>
@@ -93,9 +89,7 @@
                                         <div class="course-title-3">
                                             <h1><a href="course_details.html">Matkul 3</a></h1>
                                         </div>
-                                        {{-- <div class="courses-pricing-3">
-                                            <span>$24.99</span>
-                                        </div> --}}
+
                                     </div>
                                     <div class="courses-para mt-15">
                                         <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.</p>
@@ -119,9 +113,7 @@
                                         <div class="course-title-3">
                                             <h1><a href="course_details.html">Matkul 4</a></h1>
                                         </div>
-                                        {{-- <div class="courses-pricing-3">
-                                            <span>$24.99</span>
-                                        </div> --}}
+
                                     </div>
                                     <div class="courses-para mt-15">
                                         <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.</p>
@@ -145,9 +137,7 @@
                                         <div class="course-title-3">
                                             <h1><a href="course_details.html">Matkul 5</a></h1>
                                         </div>
-                                        {{-- <div class="courses-pricing-3">
-                                            <span>$24.99</span>
-                                        </div> --}}
+
                                     </div>
                                     <div class="courses-para mt-15">
                                         <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.</p>
@@ -171,9 +161,7 @@
                                         <div class="course-title-3">
                                             <h1><a href="course_details.html">Matkul 6</a></h1>
                                         </div>
-                                        {{-- <div class="courses-pricing-3">
-                                            <span>$24.99</span>
-                                        </div> --}}
+
                                     </div>
                                     <div class="courses-para mt-15">
                                         <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.</p>
@@ -197,9 +185,7 @@
                                         <div class="course-title-3">
                                             <h1><a href="course_details.html">Matkul 7</a></h1>
                                         </div>
-                                        {{-- <div class="courses-pricing-3">
-                                            <span>$24.99</span>
-                                        </div> --}}
+
                                     </div>
                                     <div class="courses-para mt-15">
                                         <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.</p>
@@ -223,9 +209,7 @@
                                         <div class="course-title-3">
                                             <h1><a href="course_details.html">Matkul 8</a></h1>
                                         </div>
-                                        {{-- <div class="courses-pricing-3">
-                                            <span>$24.99</span>
-                                        </div> --}}
+                                        
                                     </div>
                                     <div class="courses-para mt-15">
                                         <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.</p>
