@@ -1,2 +1,0 @@
-@section('layouts.admin')
-@endsection

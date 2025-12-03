@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('tb_matkul', function (Blueprint $table) {
             $table->id('id_matkul');
-            $table->string('kd_matkul');
+            $table->string('kd_matkul')->unique();
             $table->string('nama_matkul');
             $table->string('sks');
+            $table->string('semester');
             $table->timestamps();
         });
     }

@@ -35,12 +35,6 @@ class AdminController extends Controller
         ]);
     }
 
-    // public function password()
-    // {
-    //     $data['title'] = 'change password';
-    //     return view('user/password', $data);
-    // }
-
     public function password_action(Request $request)
     {
         $request->validate([
@@ -55,12 +49,18 @@ class AdminController extends Controller
         return back()->with('success', 'Password Changed !');
     }
 
+    public function admin_dashboard()
+    {
+        return view('admin/dashboard');
+    }
+
+
     public function logout(Request $request)
     {
         // Auth::logout();
         Auth::guard('admin')->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('admin/app');
+        return redirect('admin');
     }
 }

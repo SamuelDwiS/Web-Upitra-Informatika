@@ -1,49 +1,58 @@
-@extends('admin.app')
 @section('admin.navbar')
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#">Admin Panel</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-
-                <!-- Data Berita -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#berita">Data Berita Kampus</a>
-                </li>
-
-                <!-- Mata Kuliah -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#matkul">Data Mata Kuliah</a>
-                </li>
-
-                <!-- Dosen -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#dosen">Data Dosen</a>
-                </li>
-
-            </ul>
-
-            <!-- Akun admin -->
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                        Admin
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <a class="nav-link" href="index.html">
+                        <div class="sb-nav-link-icon"></div>
+                        Dashboard
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Profil</a></li>
-                        <li><a class="dropdown-item" href="#">Pengaturan</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
 
+                    {{-- Navbar Berita --}}
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#gabungBerita"
+                        aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"></div>
+                        Berita
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="gabungBerita" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ route('admin.berita.index') }} ">Daftar Berita</a>
+                            <a class="nav-link" href=" {{ route('admin.berita.create') }} ">Tambah Berita</a>
+                        </nav>
+                    </div>
+
+
+                    {{-- Navbar Mata Kuliah --}}
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#gabungMatkul"
+                        aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"></div>
+                        Mata Kuliah
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="gabungMatkul" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ route('admin.matkul.index') }}">Daftar Mata Kuliah</a>
+                            <a class="nav-link" href="{{ route('admin.matkul.create') }}">Tambah Mata Kuliah</a>
+                        </nav>
+                    </div>
+
+                    {{-- Navbar Dosen --}}
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#gabungDosen"
+                        aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"></div>
+                        Dosen
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="gabungDosen" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="layout-static.html">Daftar Dosen</a>
+                            <a class="nav-link" href="layout-sidenav-light.html">Tambah Dosen</a>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
     </div>
-</nav>
 @endsection
