@@ -3,19 +3,11 @@
 
 @section('admin.layouts')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Tables</h1>
+        <h1 class="mt-4">Mata Kuliah</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-            <li class="breadcrumb-item active">Tables</li>
+            <li class="breadcrumb-item active">Mata Kuliah</li>
         </ol>
-        <div class="card mb-4">
-            <div class="card-body">
-                DataTables is a third party plugin that is used to generate the demo table below. For more
-                information about DataTables, please visit the
-                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                .
-            </div>
-        </div>
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>
@@ -49,8 +41,8 @@
                                 <td>{{ $mk->sks }}</td>
                                 <td>{{ $mk->semester }}</td>
                                 <td>
-                                    <a href="{{ route('matkul.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <form action="{{ route('matkul.destroy', $item->id) }}" method="POST"
+                                    <a href="{{ route('admin.matkul.edit', $mk->id_matkul) }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <form action="{{ route('admin.matkul.destroy', $mk->id_matkul) }}" method="POST"
                                         style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')

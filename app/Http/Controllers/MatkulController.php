@@ -21,42 +21,43 @@ class MatkulController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'kd_matkul' => 'required|unique:matkul',
+            'kd_matkul' => 'required|unique:tb_matkul',
             'nama_matkul' => 'required',
             'sks' => 'required',
             'semester' => 'required',
         ]);
 
-        Matkul::created($request->all());
+        Matkul::create($request->all());
 
-        return redirect()->route('/matkul')->with('success', 'Data Mata Kuliah Berhasil Ditambahkan!');
+        return redirect()->route('admin.matkul.index')->with('success', 'Data Mata Kuliah Berhasil Ditambahkan!');
     }
 
     public function edit($id)
     {
-        $matkul = Matkul::findOrAll($id);
-        return view('admin.matkul.edit', compact('matkul'));
+        $data = Matkul::findOrFail($id);
+        return view('admin.matkul.edit', compact('data'));
     }
 
     public function update(Request $request, $id)
     {
-        $matkul = Matkul::findOrAll($id);
+
+
+        $matkul = Matkul::findOrFail($id);
 
         $request->validate([
-            'kd_matkul' => 'required|unique:matkul, kd_matkul' . $id,
+            'kd_matkul' => 'required|unique:tb_matkul, kd_matkul' . $id,
             'nama_matkul' => 'required',
             'sks' => 'required',
             'semester' => 'required',
         ]);
 
-        $matkul->updated($request->all());
-
+        $matkul->update($request->all());
         return view('admin.matkul.index')->with('success', 'Data Matkul Berhasil Diupdate!');
     }
 
     public function destroy($id)
     {
         Matkul::destroy($id);
-        return redirect()->route('matkul.index')->with('success', 'Mata Kuliah berhasil dihapus!');
+        return redirect()->route('admin.matkul.index')->with('success', 'Mata Kuliah berhasil dihapus!');
     }
 }
