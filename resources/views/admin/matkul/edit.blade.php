@@ -1,5 +1,5 @@
 @extends('admin.app')
-@include('admin.navbar')
+@include('admin.navbar') 
 
 @section('admin.layouts')
     <div class="container-fluid px-4">
@@ -12,7 +12,7 @@
                     @method('PUT') 
                         <div class="mb-3">
                             <label class="form-label">Kode Matkul</label>
-                            <input type="text" name="kd_matkul" class="form-control" value="{{ old('kode_matkul', $data->kd_matkul) }}" disabled required>
+                            <input type="text" name="kd_matkul" class="form-control" value="{{ old('kode_matkul', $data->kd_matkul) }}" required>
                         </div>
 
                         <div class="mb-3">

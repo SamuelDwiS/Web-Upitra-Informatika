@@ -45,7 +45,6 @@ Route::prefix('admin')->name('admin.') ->group(function () {
 
     
     Route::resource('matkul', \App\Http\Controllers\MatkulController::class);
-
     Route::resource('berita', \App\Http\Controllers\BeritaController::class);
     Route::resource('dosen', \App\Http\Controllers\DosenController::class);
 

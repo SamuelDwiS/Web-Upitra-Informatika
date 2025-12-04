@@ -38,21 +38,24 @@ class MatkulController extends Controller
         return view('admin.matkul.edit', compact('data'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $data)
     {
-
-
-        $matkul = Matkul::findOrFail($id);
+        $matkul = Matkul::findOrFail($data);
 
         $request->validate([
-            'kd_matkul' => 'required|unique:tb_matkul, kd_matkul' . $id,
+            'kd_matkul' => 'required|unique:tb_matkul,kd_matkul,' . $matkul->id_matkul . ',id_matkul',
             'nama_matkul' => 'required',
             'sks' => 'required',
             'semester' => 'required',
         ]);
 
-        $matkul->update($request->all());
-        return view('admin.matkul.index')->with('success', 'Data Matkul Berhasil Diupdate!');
+        $matkul->update([
+            'kd_matkul' => $request->kd_matkul,
+            'nama_matkul' => $request->nama_matkul,
+            'sks' => $request->sks,
+            'semester' => $request->semester
+        ]);
+        return redirect()->route('admin.matkul.index')->with('success', 'Data Matkul Berhasil Diupdate!');
     }
 
     public function destroy($id)
