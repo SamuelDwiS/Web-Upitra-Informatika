@@ -24,9 +24,11 @@ Route::get('dosen', function () {
     return view('layouts/dosen');
 })->name('dosen');
 
-Route::get('matkul', function () {
-    return view('layouts/matkul');
-})->name('matkul');
+// Route::get('matkul', function () {
+//     return view('layouts/matkul');
+// })->name('matkul');
+
+Route::get('matkul', [MatkulController::class, 'list_matkul'])->name('matkul');
 
 Route::get('biaya_r', function () {
     return view('layouts/biaya_r');

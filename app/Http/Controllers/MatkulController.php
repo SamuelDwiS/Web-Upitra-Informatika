@@ -7,6 +7,14 @@ use App\Models\Matkul;
 
 class MatkulController extends Controller
 {
+
+    public function list_matkul()
+    {
+        // $matkul = Matkul::all();
+        $matkul = Matkul::paginate(6);
+        return view('layouts.matkul', compact('matkul'));
+    }
+
     public function index()
     {
         $data = Matkul::all();

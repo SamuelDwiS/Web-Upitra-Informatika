@@ -12,7 +12,7 @@
                     @method('PUT') 
                         <div class="mb-3">
                             <label class="form-label">Kode Matkul</label>
-                            <input type="text" name="kd_matkul" class="form-control" value="{{ old('kode_matkul', $data->kd_matkul) }}" required>
+                            <input type="text" name="kd_matkul" class="form-control" value="{{ old('kd_matkul', $data->kd_matkul) }}" readonly required>
                         </div>
 
                         <div class="mb-3">
