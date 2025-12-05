@@ -15,4 +15,6 @@ class Matkul extends Model
         'sks',
         'semester',
     ];
+
+
 }

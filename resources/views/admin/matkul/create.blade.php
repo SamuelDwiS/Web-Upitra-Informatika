@@ -1,4 +1,5 @@
 @extends('admin.app')
+@include('admin.navbar')
 
 @section('admin.layouts')
 <div class="container-fluid px-4">
@@ -6,17 +7,17 @@
 
     <div class="card mb-4">
         <div class="card-body">
-            <form action="{{ route('matkul.store') }}" method="POST">
+            <form action="{{ route('admin.matkul.store') }}" method="POST">
                 @csrf
 
                 <div class="mb-3">
                     <label class="form-label">Kode Matkul</label>
-                    <input type="text" name="kode" class="form-control" required>
+                    <input type="text" name="kd_matkul" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Nama Matkul</label>
-                    <input type="text" name="nama" class="form-control" required>
+                    <input type="text" name="nama_matkul" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
