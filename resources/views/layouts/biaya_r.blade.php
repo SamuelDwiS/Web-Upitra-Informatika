@@ -17,7 +17,7 @@
                         <h1>Reguler</h1>
                         <p>Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure repreh nderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occcu idatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <p>Horem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut labore et dolore magna aliqua Ut enim ad minim veniam,quis nostrude</p>
-                        <button class="theme-btn blue-bg-border mt-20"><span class="btn-text">Detail Biaya</span></button>
+                        <button class="theme-btn blue-bg-border mt-20"><span class="btn-text"><a href="{{asset('asset/biaya.pdf')}}" style="color:black">Detail Biaya</a></span></button>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                         <h1>Beasiswa</h1>
                         <p>Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure repreh nderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occcu idatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <p>Horem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut labore et dolore magna aliqua Ut enim ad minim veniam,quis nostrude</p>
-                        <button class="theme-btn blue-bg-border mt-20"><span class="btn-text">Detail Biaya</span></button>
+                        <button class="theme-btn blue-bg-border mt-20"><span class="btn-text"><a href="{{asset('asset/biaya.pdf')}}" style="color:black">Detail Biaya</a></span></button>
                     </div>
                 </div>
             </div>
