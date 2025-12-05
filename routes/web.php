@@ -39,9 +39,9 @@ Route::post('password', [AdminController::class, 'password_action'])->name('pass
 Route::get('logout', [AdminController::class, 'logout'])->name('logout');
 Route::get('admin/dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard');
 
-Route::middleware(['auth'])->group(function () {
-    Route::resource('admin/matkul', \App\Http\Controllers\MatkulController::class);
-});
+// Route::middleware(['auth'])->group(function () {
+//     Route::resource('admin/matkul', \App\Http\Controllers\MatkulController::class);
+// });
 
 Route::prefix('admin')->group(function () {
 
@@ -49,11 +49,11 @@ Route::prefix('admin')->group(function () {
     Route::get('/matkul', [MatkulController::class, 'index'])->name('admin.matkul.index');
     Route::get('/matkul/create', [MatkulController::class, 'create'])->name('admin.matkul.create');
 
-    // Berita 
+    // Berita
     Route::get('/berita', [BeritaController::class, 'index'])->name('admin.berita.index');
     Route::get('/berita/create', [BeritaController::class, 'create'])->name('admin.berita.create');
-    
-    // Dosen 
+
+    // Dosen
     Route::get('/dosen', [BeritaController::class, 'index'])->name('admin.berita.index');
     Route::get('/dosen/create', [BeritaController::class, 'create'])->name('admin.berita.create');
 
