@@ -10,7 +10,6 @@ class Dosen extends Model
     protected $primaryKey = 'id_dosen';
 
     protected $fillable = [
-        'id_dosen',
         'NIDN',
         'nama_dosen',
         'foto',

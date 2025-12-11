@@ -28,7 +28,6 @@ class DosenController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_dosen' => 'required|unique:tb_dosen',
             'NIDN' => 'required',
             'nama_dosen' => 'required',
             'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
@@ -42,7 +41,6 @@ class DosenController extends Controller
         }
 
          Dosen::create([
-        'id_dosen' => $request->id_dosen,
         'NIDN' => $request->NIDN,
         'nama_dosen' => $request->nama_dosen,
         'foto' => $namafoto,
@@ -62,7 +60,6 @@ class DosenController extends Controller
         $dosen = Dosen::findOrFail($data);
 
         $request->validate([
-            'id_dosen' => 'required|unique:tb_dosen,id_dosen,' . $dosen->id_dosen . ',id_dosen',
             'NIDN' => 'required',
             'nama_dosen' => 'required',
             'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
@@ -85,7 +82,6 @@ class DosenController extends Controller
 
 
         $dosen->update([
-            'id_dosen' => $request->id_dosen,
             'NIDN' => $request->NIDN,
             'nama_dosen' => $request->nama_dosen,
             'foto' => $request->nama_foto,
