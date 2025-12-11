@@ -8,7 +8,6 @@ use App\Http\Controllers\DosenController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Attributes\Layout;
 
-
 Route::get('/', function () {
     return view('layouts/home');
 })->name('home');
@@ -30,6 +29,7 @@ Route::get('dosen', function () {
 // })->name('matkul');
 
 Route::get('matkul', [MatkulController::class, 'list_matkul'])->name('matkul');
+Route::get('berita', [MatkulController::class, 'list_berita'])->name('berita');
 
 Route::get('dosen', [DosenController::class, 'list_dosen'])->name('dosen');
 
