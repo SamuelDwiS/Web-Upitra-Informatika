@@ -88,7 +88,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="course_01.html">BIAYA KULIAH</a>
+                                            <a href="{{route('biaya_r')}}">BIAYA KULIAH</a>
                                             <ul class="submenu">
                                                 <li>
                                                     <a href="{{route('biaya_r')}}#beasiswa">Beasiswa</a>

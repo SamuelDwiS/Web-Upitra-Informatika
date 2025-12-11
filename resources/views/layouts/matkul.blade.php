@@ -35,10 +35,7 @@
                         @foreach ($matkul as $mk)
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="courses-wrapper courses-wrapper-3 mb-30">
-                                    <div class="courses-thumb">
-                                        <a href="course_details.html"><img src="img/courses/coursesthumb_home3_01.jpg"
-                                                alt=""></a>
-                                    </div>
+                                    
                                     <div class="courses-content courses-content-3 clearfix">
                                         <div class="courses-heading mt-25 d-flex">
                                             <div class="course-title-3">

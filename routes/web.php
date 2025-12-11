@@ -30,6 +30,8 @@ Route::get('dosen', function () {
 
 Route::get('matkul', [MatkulController::class, 'list_matkul'])->name('matkul');
 
+Route::get('dosen', [DosenController::class, 'list_dosen'])->name('dosen');
+
 Route::get('biaya_r', function () {
     return view('layouts/biaya_r');
 })->name('biaya_r');

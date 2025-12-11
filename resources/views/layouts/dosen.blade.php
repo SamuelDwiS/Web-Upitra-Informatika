@@ -42,74 +42,27 @@
                 </div>
             </div>
         </div>
+
         <div class="team-list">
             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="team-wrapper mb-30">
-                        <div class="team-thumb">
-                            <img src="{{asset('asset/bg.jpg')}}" alt="">
-                        </div>
+                @foreach ($dosen as $ds)
+                    <div class="col-xl-3 col-lg-3 col-md-6">
+                        <div class="team-wrapper mb-30">
+                            <div class="team-thumb">
+                                <img src="{{ asset('asset/foto_dosen/'. $ds->foto) }}" alt="">
+                            </div>
 
-                        <div class="team-teacher-info text-center">
-                            <h1>Nama Dosen 1</h1>
-                            <h2>NIDN</h2>
+                            <div class="team-teacher-info text-center">
+                                <h1>{{ $ds->nama_dosen }}</h1>
+                                <h2>NIDN</h2>
+                                <h2>{{ $ds->NIDN }}</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="team-wrapper mb-30">
-                        <div class="team-thumb">
-                            <img src="{{asset('asset/bg.jpg')}}" alt="">
-                        </div>
-
-                        <div class="team-teacher-info text-center">
-                            <h1>Nama Dosen 2</h1>
-                            <h2>NIDN</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="team-wrapper mb-30">
-                        <div class="team-thumb">
-                            <img src="{{asset('asset/bg.jpg')}}" alt="">
-                        </div>
-
-                        <div class="team-teacher-info text-center">
-                            <h1>Nama Dosen 3</h1>
-                            <h2>NIDN</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="team-wrapper mb-30">
-                        <div class="team-thumb">
-                            <img src="{{asset('asset/bg.jpg')}}" alt="">
-                        </div>
-
-                        <div class="team-teacher-info text-center">
-                            <h1>Nama Dosen 4</h1>
-                            <h2>NIDN</h2>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="team-wrapper mb-30">
-                        <div class="team-thumb">
-                            <img src="{{asset('asset/bg.jpg')}}" alt="">
-                        </div>
-                        
-                        <div class="team-teacher-info text-center">
-                            <h1>Nama Dosen 5</h1>
-                            <h2>NIDN</h2>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
         </div>
+
     </div>
 </div>
 <!-- team end -->

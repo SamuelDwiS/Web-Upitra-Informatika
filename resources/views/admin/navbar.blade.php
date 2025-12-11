@@ -46,8 +46,8 @@
                     </a>
                     <div class="collapse" id="gabungDosen" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="layout-static.html">Daftar Dosen</a>
-                            <a class="nav-link" href="layout-sidenav-light.html">Tambah Dosen</a>
+                            <a class="nav-link" href="{{ route('admin.dosen.index') }}">Daftar Dosen</a>
+                            <a class="nav-link" href="{{ route('admin.dosen.create') }}">Tambah Dosen</a>
                         </nav>
                     </div>
 

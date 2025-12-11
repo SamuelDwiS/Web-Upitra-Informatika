@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 use App\Models\Admin;
+use App\Models\Matkul;
 
 class AdminSeeder extends Seeder
 {
