@@ -8,13 +8,10 @@
             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
             <li class="breadcrumb-item active">Mata Kuliah</li>
         </ol>
-        <div class="card mb-4">
-            <div class="card-header">
-                <i class="fas fa-table me-1"></i>
-                DataTable Example
-            </div>
-            <div class="card-body">
-                <table id="datatablesSimple">
+       
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="datatablesSimple" class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
                             <th>Kode Matkul</th>
@@ -24,15 +21,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Kode Matkul</th>
-                            <th>Nama Matkul</th>
-                            <th>SKS</th>
-                            <th>Semester</th>
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
+
                     <tbody>
                         @foreach ($data as $mk)
                             <tr>
@@ -53,8 +42,10 @@
                             </tr>
                         @endforeach
                     </tbody>
+
                 </table>
             </div>
         </div>
     </div>
 @endsection
+

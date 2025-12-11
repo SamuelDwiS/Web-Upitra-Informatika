@@ -68,6 +68,8 @@ class DosenController extends Controller
             'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
+
+
         $nama_foto = $dosen->foto; // Ambil nama foto lama
 
         if($request->hasFile('foto')){
@@ -80,11 +82,13 @@ class DosenController extends Controller
         $nama_foto = time().'.'.$file->extension();
         $file->move(public_path('asset/foto_dosen'), $nama_foto);
         }
+
+
         $dosen->update([
             'id_dosen' => $request->id_dosen,
             'NIDN' => $request->NIDN,
             'nama_dosen' => $request->nama_dosen,
-            'foto' => $request->foto,
+            'foto' => $request->nama_foto,
         ]);
         return redirect()->route('admin.dosen.index')->with('success', 'Data Dosen Berhasil Diupdate!');
     }

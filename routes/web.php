@@ -8,6 +8,7 @@ use App\Http\Controllers\DosenController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Attributes\Layout;
 
+
 Route::get('/', function () {
     return view('layouts/home');
 })->name('home');

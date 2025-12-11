@@ -7,7 +7,7 @@
 
         <div class="card mb-4">
             <div class="card-body">
-                <form action="{{ route('admin.dosen.update', $data->id_dosen) }}" method="POST">
+                <form action="{{ route('admin.dosen.update', $data->id_dosen) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                         <div class="mb-3">
