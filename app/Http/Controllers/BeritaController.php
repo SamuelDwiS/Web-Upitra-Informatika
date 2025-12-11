@@ -10,53 +10,85 @@ class BeritaController extends Controller
     public function index()
     {
         $data = Berita::all();
-        return view('admin.matkul.index', compact('data'));
+        return view('admin.berita.index', compact('data'));
     }
 
     public function create()
     {
-        return view('admin.matkul.create');
+        return view('admin.berita.create');
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'kd_matkul' => 'required|unique:tb_matkul',
-            'nama_matkul' => 'required',
-            'sks' => 'required',
-            'semester' => 'required',
+        'judul' => 'required',
+        'deskripsi' => 'required',
+        'tgl_berita' => 'required',
+        'kategori' => 'required',
+        'gambar' => 'image|mimes:png,jpg,|max:2048',
         ]);
 
-        Berita::create($request->all());
 
-        return redirect()->route('admin.matkul.index')->with('success', 'Data Mata Kuliah Berhasil Ditambahkan!');
+        $namaGambar = null;
+        if($request->hasFile('gambar'))
+        {
+            $namaGambar = time().'.'. $request->gambar->extension();
+            $request->gambar->move(public_path('asset/foto_berita'), $namaGambar);
+        }
+        Berita::create([
+         'judul' => $request->judul,
+        'deskripsi' => $request->deskripsi,
+        'tgl_berita' => $request->tgl_berita,
+        'kategori' => $request->kategori,
+        'gambar' => $namaGambar,
+        ]);
+
+        return redirect()->route('admin.berita.index')->with('success', 'Data Mata Kuliah Berhasil Ditambahkan!');
     }
 
     public function edit($id)
     {
         $data = Berita::findOrFail($id);
-        return view('admin.matkul.edit', compact('data'));
+        return view('admin.berita.edit', compact('data'));
     }
 
     public function update(Request $request, $id)
     {
-        $matkul = Berita::findOrFail($id);
+        $berita = Berita::findOrFail($id);
 
         $request->validate([
-            'kd_matkul' => 'required|unique:tb_matkul, kd_matkul' . $id,
-            'nama_matkul' => 'required',
-            'sks' => 'required',
-            'semester' => 'required',
+        'judul' => 'required|unique:tb_berita,judul' .$id,
+        'deskripsi' => 'required',
+        'tgl_berita' => 'required',
+        'kategori' => 'required',
+        'gambar' => 'img|mimes:png,jpg,|max:2048',
         ]);
 
-        $matkul->update($request->all());
+        $nama_gambar = $berita->gambar; 
 
-        return view('admin.matkul.index')->with('success', 'Data Matkul Berhasil Diupdate!');
+        if($request->hasFile('foto')){
+            if ($berita->gambar && $berita->gambar != 'default.png') {
+                unlink(public_path('asset/foto_berita/'. $dosen->gambar));
+            }
+            
+        $file = $request->file('foto');
+        $nama_gambar = time().'.'.$file->extension();
+        $file->move(public_path('asset/foto_berita'), $nama_gambar);
+        }
+        $dosen->update([
+            'judul' => $request->judul,
+            'deskripsi' => $request->deskripsi,
+            'tgl_berita' => $request->tgl_berita,
+            'kategori' => $request->kategori,
+            'gambar' => $request->gambar,
+        ]);
+        
+        return view('admin.berita.index')->with('success', 'Data Berita Berhasil Diupdate!');
     }
 
     public function destroy($id)
     {
         Berita::destroy($id);
-        return redirect()->route('admin.matkul.index')->with('success', 'Mata Kuliah berhasil dihapus!');
+        return redirect()->route('admin.berita.index')->with('success', 'Mata Kuliah berhasil dihapus!');
     }
 }
