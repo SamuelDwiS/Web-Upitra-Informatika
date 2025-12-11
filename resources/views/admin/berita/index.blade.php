@@ -3,41 +3,47 @@
 
 @section('admin.layouts')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Tambah Data Dosen</h1>
-
-        <div class="card mb-4">
-            <div class="card-body">
-                <form action="{{ route('admin.berita.store') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="mb-3">
-                        <label class="form-label">Judul</label>
-                        <input type="text" name="judul" class="form-control" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Deskripsi</label>
-                        <input type="text" name="deskripsi" class="form-control" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Berita</label>
-                        <input type="date" name="tgl_berita" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Kategori</label>
-                        <select class="form-select" name="kategori" id="kategori">
-                            <option value="Berita">Berita</option>
-                            <option value="Event">Event</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Foto Berita</label>
-                        <input type="file" name="gambar" class="form-control" required>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Simpan</button>
-                </form>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Berita</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active">Berita</li>
+        </ol>
+       
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="datatablesSimple" class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Judul</th>
+                            <th>Deskripsi</th>
+                            <th>Tanggal Berita</th>
+                            <th>Kategori</th>
+                            <th>Gambar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($data as $db)
+                            <tr>
+=                                <td>{{ $db->judul }}</td>
+                                <td>{{ $db->deskripsi }}</td>
+                                <td>{{ $db->tgl_berita }}</td>
+                                <td>{{ $db->kategori }}</td>
+                                <td>{{ $db->gambar }}</td>
+                                <td>
+                                    <a href="{{ route('admin.dosen.edit', $db->id_berita) }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <form action="{{ route('admin.dosen.destroy', $db->id_berita) }}" method="POST"
+                                        style="display: inline-block;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button onclick="return confirm('Yakin ingin hapus?')"
+                                            class="btn btn-danger btn-sm">Hapus</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
