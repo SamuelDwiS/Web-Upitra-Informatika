@@ -29,7 +29,7 @@ Route::get('dosen', function () {
 // })->name('matkul');
 
 Route::get('matkul', [MatkulController::class, 'list_matkul'])->name('matkul');
-Route::get('berita', [MatkulController::class, 'list_berita'])->name('berita');
+Route::get('berita', [BeritaController::class, 'list_berita'])->name('berita');
 
 Route::get('dosen', [DosenController::class, 'list_dosen'])->name('dosen');
 

@@ -35,10 +35,10 @@
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="courses-wrapper courses-wrapper-3 mb-30">
                                     
-                                    <div class="courses-content courses-content-3 clearfix">
+                                    <div class="courses-content clearfix">
                                         <div class="courses-heading mt-25 d-flex">
                                             <div class="course-title-3">
-                                                <h5>{{ $mk->kd_matkul }}</h5>
+                                                <h6>{{ $mk->kd_matkul }}</h5>
                                                 <h1><a href="course_details.html">{{ $mk->nama_matkul }}</a></h1>
                                             </div>
 

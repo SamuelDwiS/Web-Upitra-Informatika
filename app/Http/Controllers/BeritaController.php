@@ -7,6 +7,13 @@ use App\Models\Berita;
 
 class BeritaController extends Controller
 {
+
+    public function list_berita()
+    {
+        $berita = Berita::all();
+        return view('layouts.berita', compact('berita'));
+    }
+
     public function index()
     {
         $data = Berita::all();
@@ -68,14 +75,14 @@ class BeritaController extends Controller
 
         if($request->hasFile('foto')){
             if ($berita->gambar && $berita->gambar != 'default.png') {
-                unlink(public_path('asset/foto_berita/'. $dosen->gambar));
+                unlink(public_path('asset/foto_berita/'. $berita->gambar));
             }
             
         $file = $request->file('foto');
         $nama_gambar = time().'.'.$file->extension();
         $file->move(public_path('asset/foto_berita'), $nama_gambar);
         }
-        $dosen->update([
+        $berita->update([
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
             'tgl_berita' => $request->tgl_berita,
