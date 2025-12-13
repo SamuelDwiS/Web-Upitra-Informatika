@@ -15,6 +15,13 @@ class MatkulController extends Controller
         return view('layouts.matkul', compact('matkul'));
     }
 
+    public function list_matkul_home()
+    {
+        // $matkul = Matkul::all();
+        $matkul = Matkul::paginate(6);
+        return view('layouts.home', compact('matkul'));
+    }
+
     public function index()
     {
         $data = Matkul::all();

@@ -3,11 +3,10 @@
 
 @section('admin.layouts')
     <div class="container-fluid px-4">
-    <div class="container-fluid px-4">
-        <h1 class="mt-4">Berita</h1>
+        <h1 class="mt-4">Testimoni</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-            <li class="breadcrumb-item active">Berita</li>
+            <li class="breadcrumb-item active">Testimoni</li>
         </ol>
        
         <div class="card-body">
@@ -15,24 +14,22 @@
                 <table id="datatablesSimple" class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>Judul</th>
-                            <th>Deskripsi</th>
-                            <th>Tanggal Berita</th>
-                            <th>Kategori</th>
-                            <th>Gambar</th>
+                            <th>Nama Alumni</th>
+                            <th>Pekerjaan</th>
+                            <th>Ulasan</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
+
                     <tbody>
-                        @foreach ($data as $db)
+                        @foreach ($data as $ts)
                             <tr>
-                                <td>{{ $db->judul }}</td>
-                                <td>{{ $db->deskripsi }}</td>
-                                <td>{{ $db->tgl_berita }}</td>
-                                <td>{{ $db->kategori }}</td>
-                                <td>{{ $db->gambar }}</td>
+                                <td>{{ $ts->nm_alumni }}</td>
+                                <td>{{ $ts->pekerjaan }}</td>
+                                <td>{{ $ts->ulasan }}</td>
                                 <td>
-                                    <a href="{{ route('admin.dosen.edit', $db->id_berita) }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <form action="{{ route('admin.dosen.destroy', $db->id_berita) }}" method="POST"
+                                    <a href="{{ route('admin.testimoni.edit', $ts->id_testimoni) }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <form action="{{ route('admin.testimoni.destroy', $ts->id_testimoni) }}" method="POST"
                                         style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')
@@ -43,8 +40,10 @@
                             </tr>
                         @endforeach
                     </tbody>
+
                 </table>
             </div>
         </div>
     </div>
 @endsection
+

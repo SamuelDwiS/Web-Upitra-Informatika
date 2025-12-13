@@ -18,12 +18,10 @@
                                   <span>Follow Us</span>
                                   <div class="footer-social-icon-list">
                                       <ul>
-                                          <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                          <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                          <li><a href="#"><span class="ti-dribbble"></span></a></li>
-                                          <li><a href="#"><span class="ti-google"></span></a></li>
-                                          <li><a href="#"><span class="ti-pinterest"></span></a></li>
-                                          <li><a href="#"><span class="ti-instagram"></span></a></li>
+                                          <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                                          <li><a href="#"><span class="fab fa-google"></span></a></li>
+                                          <li><a href="#"><span class="fab fa-whatsapp"></span></a></li>
+                                          <li><a href="#"><span class="fab fa-instagram"></span></a></li>
                                       </ul>
                                   </div>
                               </div>
@@ -37,52 +35,18 @@
                               <div class="footer-menu clearfix">
                                   <ul>
                                       <li><a href="#">Home</a></li>
-                                      <li><a href="#">svbsvjso</a></li>
-                                      <li><a href="{{route('dosen')}}">Dosen Pengampu</a></li>
-                                      <li><a href="#">Matkul</a></li>
+                                      <li><a href="{{ route('dosen') }}">Dosen</a></li>
+                                      <li><a href="#">Post Terkini</a></li>
                                       <li><a href="#">Berita</a></li>
                                       <li><a href="#">Pengumuman</a></li>
-                                      <li><a href="#">About Us</a></li>
-                                      <li><a href="#">Contact Us</a></li>
-                                      <li><a href="#">Who we are</a></li>
-                                      <li><a href="#">Get a Quote</a></li>
-                                      <li><a href="#">Recent Post</a></li>
-                                      <li><a href="#">Who we are</a></li>
+                                      <li><a href="#">Mata Kuliah</a></li>
+                                      <li><a href="#">Hubungi Kami</a></li>
+                                      <li><a href="#">Tentang Kami</a></li>
+
                                   </ul>
                               </div>
                           </div>
                       </div>
-                      <!-- <div class="col-xl-3 col-lg-4 d-lg-none d-xl-block col-md-6">
-                            <div class="footer-widget mb-30">
-                                <div class="footer-heading">
-                                    <h1>Recent Post</h1>
-                                </div>
-                                <div class="recent-post d-flex mb-25">
-                                    <div class="recent-post-thumb">
-                                        <img src="img/post/recent_post1.jpg" alt="">
-                                    </div>
-                                    <div class="recent-post-text">
-                                        <p>Neque porro quisquam est qui dolorem ipsum</p>
-                                        <div class="footer-time">
-                                            <span class="ti-time"></span>
-                                            <span class="footer-published-time">05 May 2018</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="recent-post d-flex">
-                                    <div class="recent-post-thumb">
-                                        <img src="img/post/recent_post1.jpg" alt="">
-                                    </div>
-                                    <div class="recent-post-text">
-                                        <p>Neque porro quisquam est qui dolorem ipsum</p>
-                                        <div class="footer-time">
-                                            <span class="ti-time"></span>
-                                            <span class="footer-published-time">05 May 2018</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                       <div class="col-xl-3 col-lg-4  col-md-6">
                           <div class="footer-widget mb-30">
                               <div class="footer-heading">
@@ -99,15 +63,11 @@
                                   </div>
                                   <div class="single-footer-contact-info">
                                       <span class="ti-location-pin"></span>
-                                      <span class="footer-contact-list-text">Jl.Duwet No.1 Karangasem Laweyan Surakarta 57145</span>
+                                      <span class="footer-contact-list-text">Jl.Duwet No.1 Karangasem Laweyan Surakarta
+                                          57145</span>
                                   </div>
                               </div>
-                              <!-- <div class="opening-time">
-                                    <span>Opening Hour</span>
-                                    <span class="opening-date">
-                                        Sun - Sat : 10:00 am - 05:00 pm
-                                    </span>
-                                </div> -->
+
                           </div>
                       </div>
                   </div>

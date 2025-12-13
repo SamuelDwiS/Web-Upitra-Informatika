@@ -11,6 +11,7 @@
 
     <link rel="manifest" href="site.html">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
     <!-- Place favicon.ico in the root directory -->
 

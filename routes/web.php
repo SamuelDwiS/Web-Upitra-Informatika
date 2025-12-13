@@ -5,10 +5,12 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\MatkulController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\TestimoniController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Attributes\Layout;
 
-Route::get('/', function () {
+Route::get('home', function () {
     return view('layouts/home');
 })->name('home');
 
@@ -24,13 +26,9 @@ Route::get('dosen', function () {
     return view('layouts/dosen');
 })->name('dosen');
 
-// Route::get('matkul', function () {
-//     return view('layouts/matkul');
-// })->name('matkul');
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('matkul', [MatkulController::class, 'list_matkul'])->name('matkul');
 Route::get('berita', [BeritaController::class, 'list_berita'])->name('berita');
-
 Route::get('dosen', [DosenController::class, 'list_dosen'])->name('dosen');
 
 Route::get('biaya_r', function () {
@@ -52,6 +50,7 @@ Route::prefix('admin')->name('admin.') ->group(function () {
     Route::resource('matkul', \App\Http\Controllers\MatkulController::class);
     Route::resource('berita', \App\Http\Controllers\BeritaController::class);
     Route::resource('dosen', \App\Http\Controllers\DosenController::class);
+    Route::resource('testimoni', \App\Http\Controllers\TestimoniController::class);
 
     // Dosen
     // Route::get('/dosen', [DosenController::class, 'index'])->name('admin.dosen.index');

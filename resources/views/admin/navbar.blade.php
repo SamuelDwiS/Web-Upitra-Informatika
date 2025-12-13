@@ -51,6 +51,20 @@
                         </nav>
                     </div>
 
+                    {{-- Navbar Testimoni --}}
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#gabungTestimoni"
+                        aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"></div>
+                       Testimoni
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="gabungTestimoni" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ route('admin.testimoni.index') }}">Daftar testimoni</a>
+                            <a class="nav-link" href="{{ route('admin.testimoni.create') }}">Tambah Testimoni</a>
+                        </nav>
+                    </div>
+
                 </div>
             </div>
         </nav>
