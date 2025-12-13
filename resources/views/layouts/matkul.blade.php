@@ -7,11 +7,10 @@
                 <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="section-title mb-50 text-center">
                         <div class="section-title-heading mb-20">
-                            <h1 class="primary-color">Daftar Mata Kuliah</h1>
+                            <h1 class="primary-color">Mata Kuliah</h1>
                         </div>
                         <div class="section-title-para">
-                            <p class="gray-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis
-                                scelerisqu Nullam arcu liquam here was consequat.</p>
+                            <p class="gray-color">Daftar Mata Kuliah Program Studi Informatika.</p>
                         </div>
                     </div>
                 </div>
@@ -22,7 +21,7 @@
                     <div class="widget mb-40 white-bg">
                         <div class="sidebar-form">
                             <form action="#">
-                                <input placeholder="Search course" type="text">
+                                <input placeholder="Cari Mata Kuliah" type="text">
                                 <button type="submit">
                                     <i class="ti-search"></i>
                                 </button>
@@ -36,22 +35,19 @@
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="courses-wrapper courses-wrapper-3 mb-30">
                                     
-                                    <div class="courses-content courses-content-3 clearfix">
+                                    <div class="courses-content clearfix">
                                         <div class="courses-heading mt-25 d-flex">
                                             <div class="course-title-3">
+                                                <h6>{{ $mk->kd_matkul }}</h5>
                                                 <h1><a href="course_details.html">{{ $mk->nama_matkul }}</a></h1>
                                             </div>
 
                                         </div>
                                         <div class="courses-para mt-15">
-                                            <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.
-                                            </p>
+                                            <p>SKS {{ $mk->sks}}</p>
+                                            <p>Semester {{ $mk->semester}}</p>
                                         </div>
-                                        <div class="courses-wrapper-bottom clearfix mt-35">
-                                            <div class="courses-button">
-                                                <a href="course_details.html">View Details</a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
