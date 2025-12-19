@@ -3,7 +3,7 @@
 
 @section('admin.layouts')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Tambah Mata Kuliah</h1>
+        <h1 class="mt-4">Edit Testimoni</h1>
 
         <div class="card mb-4">
             <div class="card-body">
@@ -22,7 +22,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Ulasan</label>
-                            <input type="number" name="ulasan" class="form-control"  value="{{ old('ulasan', $data->ulasan) }}" required>
+                            <input type="text" name="ulasan" class="form-control"  value="{{ old('ulasan', $data->ulasan) }}" required>
                         </div>
 
 

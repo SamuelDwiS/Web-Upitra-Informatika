@@ -3,7 +3,7 @@
 
 @section('admin.layouts')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Update Data Dosen</h1>
+        <h1 class="mt-4">Edit Data Dosen</h1>
 
         <div class="card mb-4">
             <div class="card-body">
@@ -27,7 +27,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Foto Dosen</label>
-                            <input type="file" name="foto" class="form-control"  value="{{ old('foto', $data->foto) }}" required>
+                            <input type="file" name="foto" class="form-control"  value="{{ old('foto', $data->foto) }}">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Simpan</button>

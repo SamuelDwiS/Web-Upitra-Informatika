@@ -20,6 +20,7 @@
                             <th>Tanggal Berita</th>
                             <th>Kategori</th>
                             <th>Gambar</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -31,8 +32,8 @@
                                 <td>{{ $db->kategori }}</td>
                                 <td>{{ $db->gambar }}</td>
                                 <td>
-                                    <a href="{{ route('admin.dosen.edit', $db->id_berita) }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <form action="{{ route('admin.dosen.destroy', $db->id_berita) }}" method="POST"
+                                    <a href="{{ route('admin.berita.edit', $db->id_berita) }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <form action="{{ route('admin.berita.destroy', $db->id_berita) }}" method="POST"
                                         style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')

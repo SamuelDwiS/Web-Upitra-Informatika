@@ -46,15 +46,15 @@ class TestimoniController extends Controller
 
     public function update(Request $request, $id)
     {
-        $matkul = Testimoni::findOrFail($id);
+        $testimoni = Testimoni::findOrFail($id);
 
         $request->validate([
-            'nm_alumni' => 'required|unique:tb_testimoni,nm_alumni' . $id,
+            'nm_alumni' => 'required|unique:tb_testimoni,nm_alumni,' . $testimoni->id_testimoni . ',id_testimoni',
             'pekerjaan' => 'required',
             'ulasan' => 'required',
         ]);
 
-        $matkul->update([
+        $testimoni->update([
             'nm_alumni' => $request->nm_alumni,
             'pekerjaan' => $request->pekerjaan,
             'ulasan' => $request->ulasan,
@@ -65,6 +65,6 @@ class TestimoniController extends Controller
     public function destroy($id)
     {
         Testimoni::destroy($id);
-        return redirect()->route('admin.testimoni.index')->with('success', 'Mata Kuliah berhasil dihapus!');
+            return redirect()->route('admin.testimoni.index')->with('success', 'Mata Kuliah berhasil dihapus!');
     }
 }

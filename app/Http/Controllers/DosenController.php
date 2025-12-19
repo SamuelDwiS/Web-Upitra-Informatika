@@ -34,16 +34,15 @@ class DosenController extends Controller
         ]);
 
         $namafoto = null;
-        if($request ->hasFile('foto'))
-        {
-            $namafoto = time().'.'. $request->foto->extension();
+        if ($request->hasFile('foto')) {
+            $namafoto = time() . '.' . $request->foto->extension();
             $request->foto->move(public_path('asset/foto_dosen'), $namafoto);
         }
 
-         Dosen::create([
-        'NIDN' => $request->NIDN,
-        'nama_dosen' => $request->nama_dosen,
-        'foto' => $namafoto,
+        Dosen::create([
+            'NIDN' => $request->NIDN,
+            'nama_dosen' => $request->nama_dosen,
+            'foto' => $namafoto,
         ]);
 
         return redirect()->route('admin.dosen.index')->with('success', 'Data Dosen Berhasil Ditambahkan!');
@@ -60,34 +59,39 @@ class DosenController extends Controller
         $dosen = Dosen::findOrFail($data);
 
         $request->validate([
-            'NIDN' => 'required',
+            'NIDN' => 'required|unique:tb_dosen,NIDN,' . $dosen->id_dosen . ',id_dosen',
             'nama_dosen' => 'required',
-            'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
+            'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
+        // default pakai foto lama
+        $nama_foto = $dosen->foto;
 
+        // jika upload foto baru
+        if ($request->hasFile('foto')) {
 
-        $nama_foto = $dosen->foto; // Ambil nama foto lama
-
-        if($request->hasFile('foto')){
-        // Hapus foto lama jika ada dan bukan foto default
-            if ($dosen->foto && $dosen->foto != 'default.png') {
-                unlink(public_path('asset/foto_dosen/'. $dosen->foto));
+            if (
+                $dosen->foto && $dosen->foto !== 'default.png'
+                && file_exists(public_path('asset/foto_dosen/' . $dosen->foto))
+            ) {
+                unlink(public_path('asset/foto_dosen/' . $dosen->foto));
             }
 
-        $file = $request->file('foto');
-        $nama_foto = time().'.'.$file->extension();
-        $file->move(public_path('asset/foto_dosen'), $nama_foto);
+            $file = $request->file('foto');
+            $nama_foto = time() . '.' . $file->extension();
+            $file->move(public_path('asset/foto_dosen'), $nama_foto);
         }
-
 
         $dosen->update([
             'NIDN' => $request->NIDN,
             'nama_dosen' => $request->nama_dosen,
-            'foto' => $request->nama_foto,
+            'foto' => $nama_foto, 
         ]);
-        return redirect()->route('admin.dosen.index')->with('success', 'Data Dosen Berhasil Diupdate!');
+
+        return redirect()->route('admin.dosen.index')
+            ->with('success', 'Data Dosen Berhasil Diupdate!');
     }
+
 
     public function destroy($id)
     {

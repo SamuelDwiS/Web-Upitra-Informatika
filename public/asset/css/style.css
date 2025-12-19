@@ -2142,6 +2142,21 @@ span.published-time {
     padding-left: 25px;
 }
 
+.events-thumb {
+    width: 260px;          
+    height: 200px;         
+    overflow: hidden;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.events-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+    display: block;
+}
+
 .event-details-thumb img {
     width: 100%;
 }
@@ -2781,6 +2796,18 @@ span.published-time.published-location {
 
 .admin-blog-info ul li span {
     color: #444444;
+}
+
+.blog-date {
+    font-size: 20px;
+    color: #6c757d; /* abu-abu halus */
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.blog-date i {
+    margin-right: 5px;
+    color: #f5b400; /* kuning senada label BERITA */
 }
 
 .blog-date-margin {

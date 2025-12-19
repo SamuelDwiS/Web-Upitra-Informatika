@@ -6,7 +6,7 @@
 {{-- @include('partials.navbar') --}}
 
 
-<div class="">
+<div>
     @yield('content')
 </div>
 </body>

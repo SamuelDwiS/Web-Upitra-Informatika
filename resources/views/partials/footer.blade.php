@@ -10,9 +10,7 @@
                                   <img src="img/logo/logo_2.png" alt="">
                               </div>
                               <div class="footer-para">
-                                  <p>Sorem ipsum dolor sit amet conse ctetur adipiscing elit, sed do eiusmod incididunt
-                                      ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercition
-                                      ullamco laboris nisi </p>
+                                  <p> </p>
                               </div>
                               <div class="footer-socila-icon">
                                   <span>Follow Us</span>
@@ -50,7 +48,7 @@
                       <div class="col-xl-3 col-lg-4  col-md-6">
                           <div class="footer-widget mb-30">
                               <div class="footer-heading">
-                                  <h1>Contact Us</h1>
+                                  <h1>Kontak</h1>
                               </div>
                               <div class="footer-contact-list">
                                   <div class="single-footer-contact-info">
@@ -77,7 +75,7 @@
                       <div class="row">
                           <div class="col-xl-12">
                               <div class="footer-copyright text-center">
-                                  <span><a>&copy; Copyright by Informatika</a></span>
+                                  <span><a>&copy; Copyright by Universitas Pignatelli Triputra</a></span>
                               </div>
                           </div>
                       </div>

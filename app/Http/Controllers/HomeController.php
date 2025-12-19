@@ -14,7 +14,8 @@ class HomeController extends Controller
     {
         $testimoni = Testimoni::all();
         $matkul = Matkul::paginate(6);
-        $berita = Berita::paginate(6);
-        return view('layouts.home', compact('testimoni', 'matkul', 'berita'));
+        $berita = Berita::all();
+        $dosen = Dosen::paginate(6);
+        return view('layouts.home', compact('testimoni', 'matkul', 'berita', 'dosen'));
     }
 }

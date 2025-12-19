@@ -28,11 +28,10 @@
                         <div class="col-xl-8 col-md-12 offset-xl-2">
                             <div class="slider-content slider-content-2 text-center">
                                 <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">
-                                    <span>Admition Going On</span><br>Eduara University
+                                    <span>Universitas Pignatelli Triputra</span>
                                 </h1>
-                                <p data-animation="fadeInUp" data-delay=".4s">Sorem ipsum dolor sit amet consectetur
-                                    adipisicing elit sed do eiusmod tempor <br> incididunt ut labore et dolore magna
-                                    aliqua enim ad minime.</p>
+                                <p data-animation="fadeInUp" data-delay=".4s">Excellence through Unity, People, and
+                                    Transformation.</p>
                                 <button class="theme-btn" data-animation="fadeInUp" data-delay=".6s"><span
                                         class="btn-text">admit now</span></button>
                             </div>
@@ -69,13 +68,19 @@
                 <div class="col-xl-7 col-lg-7">
                     <div class="about-title-section mb-30">
                         <h1>Sejarah Program Studi Informatika</h1>
-                        <p>Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure repreh nderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occcu idatat non proident
-                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Horem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut
-                            labore et dolore magna aliqua Ut enim ad minim veniam,quis nostrude</p>
+                        <p>Program Studi (Prodi) Informatika di Universitas Pignatelli Triputra (UPITRA) merupakan bagian
+                            dari Fakultas Sains dan Teknologi (FST)
+                            yang baru berdiri saat penggabungan ABA Santo Pignatelli dan STIE Santo Pignatelli menjadi
+                            UPITRA pada tahun 2022, dengan fokus pada pendekatan industri seperti Data Science dan Rekayasa
+                            Perangkat Lunak (termasuk teknologi game) untuk lulusan siap kerja,
+                            selaras dengan konsep "Link and Match" kampus dengan industri, terutama Triputra Group. </p>
+                        <p>Prodi ini bertujuan menghasilkan lulusan yang kompeten di bidang informatika, mampu bersaing di
+                            tingkat nasional dan internasional,
+                            serta berkontribusi pada pengembangan ilmu pengetahuan dan teknologi. Dengan kurikulum yang
+                            dirancang untuk memenuhi kebutuhan industri,
+                            Prodi Informatika UPITRA menekankan pada penguasaan teknologi terkini dan keterampilan praktis
+                            yang relevan dengan dunia kerja.</p>
+
                         <button class="theme-btn blue-bg-border mt-20"><span class="btn-text">Baca
                                 Selengkapnya</span></button>
                     </div>
@@ -86,8 +91,11 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="row pt-65">
-                <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="col-xl-12 col-lg-12 col-md-6">
                     <div class="feature-wrapper mb-30">
                         <div class="feature-title-heading">
                             <h3>Visi</h3>
@@ -100,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="col-xl-12 col-lg-12 col-md-6">
                     <div class="feature-wrapper mb-30">
                         <div class="feature-title-heading">
                             <h3>Misi</h3>
@@ -123,7 +131,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="col-xl-12 col-lg-12 col-md-6">
                     <div class="feature-wrapper mb-30">
                         <div class="feature-title-heading">
                             <h3>Tujuan</h3>
@@ -159,81 +167,41 @@
                             <h1 class="primary-color">Pengumuman</h1>
                         </div>
                         <div class="section-title-para">
-                            <p class="gray-color">Beberapa berita acara terkini pada Program Studi Informatika.</p>
+                            <p class="gray-color">Beberapa berita acara terkini pada Program Studi Informatika.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog-wrapper mb-30">
-                        <div class="blog-thumb mb-25">
-                            <a href="news_details.html"><img src=" {{ asset('asset/img/blog/blog_thumb_1.jpg') }}"
-                                    alt=""></a>
-                            <span class="blog-category">news</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span>Auguest 25, 2018</span>
-                            </div>
-                            <h5><a href="news_details.html">Some say education is the process of gaining information is
-                                    nation.</a></h5>
-                            <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
-                            <div class="read-more-btn">
-                                <button>Read more</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog-wrapper mb-30">
-                        <div class="blog-thumb mb-25">
-                            <a href="news_details.html"><img src=" {{ asset('asset/img/blog/blog_thumb_2.jpg') }} "
-                                    alt=""></a>
-                            <span class="blog-category">news</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span>Auguest 25, 2018</span>
-                            </div>
-                            <h5><a href="news_details.html">Education gives us a knowledge of the world around us and
-                                    changes </a></h5>
-                            <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
-                            <div class="read-more-btn">
-                                <button>Read more</button>
+                @foreach ($berita as $bt)
+                    @if (trim(strtolower($bt->kategori)) == 'berita')
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="blog-wrapper mb-30">
+                                <div class="blog-thumb mb-25">
+                                    <a href="news_details.html"><img src=" {{ asset('asset/img/blog/blog_thumb_1.jpg') }}"
+                                            alt=""></a>
+                                    <span class="blog-category">news</span>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span
+                                            class="month">{{ \Carbon\Carbon::parse($bt->tgl_berita)->translatedFormat('M D Y') }}</span>
+                                    </div>
+                                    <h5><a href="{{ route('berita') }}">{{ $bt->judul }}.</a></h5>
+                                    <p>{{ \Illuminate\Support\Str::limit($bt->deskripsi, 80, '...') }}</p>
+                                    <div class="read-more-btn">
+                                        <button><a href="{{ route('berita') }}">Read more</a></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog-wrapper mb-30">
-                        <div class="blog-thumb mb-25">
-                            <a href="news_details.html"><img src=" {{ asset('asset/img/blog/blog_thumb_3.jpg') }}"
-                                    alt=""></a>
-                            <span class="blog-category">news</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span>Auguest 25, 2018</span>
-                            </div>
-                            <h5><a href="news_details.html">One thing I wish I can do is, to provide education for all
-                                    child left behind </a></h5>
-                            <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
-                            <div class="read-more-btn">
-                                <button>Read more</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </div>
     <!-- pengumuman-end -->
-
-
-
-
-
 
     <!-- courses start -->
     <div id="courses" class="courses-area courses-bg-height pt-100 pb-70"
@@ -246,8 +214,8 @@
                             <h1 class="white-color">Mata Kuliah Program Studi</h1>
                         </div>
                         <div class="section-title-para">
-                            <p class="white-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras
-                                mollis scelerisqu Nullam arcu liquam here was consequat.</p>
+                            <p class="white-color">Beberapa Mata Kuliah yang terdapat pada Program Studi
+                                Informatika.</p>
                         </div>
                     </div>
                 </div>
@@ -257,11 +225,11 @@
                     @foreach ($matkul as $mk)
                         <div class="col-xl-12">
                             <div class="courses-wrapper course-radius-none mb-30">
-                                <div class="courses-thumb">
+                                {{-- <div class="courses-thumb">
                                     <a href="course_details.html"><img
                                             src=" {{ asset('asset/img/courses/single_courses_thumb_01.jpg') }} "
                                             alt=""></a>
-                                </div>
+                                </div> --}}
                                 {{-- <div class="courses-author">
                                     <img src=" {{ asset('asset/img/courses/coursesauthor1.png') }}  " alt="">
                                 </div> --}}
@@ -269,14 +237,15 @@
                                     <div class="courses-content">
                                         <div class="courses-category-name">
                                             <span>
-                                                <a href="#">Semester {{$mk->semester}}</a>
+                                                <a href="#">Semester {{ $mk->semester }}</a>
                                             </span>
                                         </div>
                                         <div class="courses-heading">
-                                            <h1><a href="course_details.html">{{$mk->nama_matkul}}</a></h1>
+                                            <h1><a href="course_details.html">{{ $mk->nama_matkul }}</a></h1>
                                         </div>
                                         <div class="courses-para">
-                                            <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.
+                                            <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque
+                                                malesuada.
                                             </p>
                                         </div>
                                     </div>
@@ -299,178 +268,7 @@
                             </div>
                         </div>
                     @endforeach
-                    {{-- <div class="col-xl-12">
-                        <div class="courses-wrapper course-radius-none mb-30">
-                            <div class="courses-thumb">
-                                <a href="course_details.html"><img
-                                        src=" {{ asset('asset/img/courses/single_courses_thumb_01.jpg') }} "
-                                        alt=""></a>
-                            </div>
-                            <div class="courses-author">
-                                <img src=" {{ asset('asset/img/courses/coursesauthor1.png') }}  " alt="">
-                            </div>
-                            <div class="course-main-content clearfix">
-                                <div class="courses-content">
-                                    <div class="courses-category-name">
-                                        <span>
-                                            <a href="#">Business</a>
-                                        </span>
-                                    </div>
-                                    <div class="courses-heading">
-                                        <h1><a href="course_details.html">Business Studies</a></h1>
-                                    </div>
-                                    <div class="courses-para">
-                                        <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="courses-wrapper-bottom clearfix">
-                                <div class="courses-icon d-flex f-left">
-                                    <div class="courses-single-icon">
-                                        <span class="ti-user"></span>
-                                        <span class="user-number">35</span>
-                                    </div>
-                                    <div class="courses-single-icon">
-                                        <span class="ti-heart"></span>
-                                        <span class="user-number">35</span>
-                                    </div>
-                                </div>
-                                <div class="courses-button f-right">
-                                    <a href="course_details.html">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-12">
-                        <div class="courses-wrapper course-radius-none mb-30">
-                            <div class="courses-thumb">
-                                <a href="course_details.html"><img
-                                        src=" {{ asset('asset/img/courses/single_courses_thumb_02.jpg') }} "
-                                        alt=""></a>
-                            </div>
-                            <div class="courses-author">
-                                <img src=" {{ asset('asset/img/courses/coursesauthor1.png') }}" alt="">
-                            </div>
-                            <div class="course-main-content clearfix">
-                                <div class="courses-content">
-                                    <div class="courses-category-name">
-                                        <span>
-                                            <a href="#">Science</a>
-                                        </span>
-                                    </div>
-                                    <div class="courses-heading">
-                                        <h1><a href="course_details.html">Computer Engineering</a></h1>
-                                    </div>
-                                    <div class="courses-para">
-                                        <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="courses-wrapper-bottom clearfix">
-                                <div class="courses-icon d-flex f-left">
-                                    <div class="courses-single-icon">
-                                        <span class="ti-user"></span>
-                                        <span class="user-number">35</span>
-                                    </div>
-                                    <div class="courses-single-icon">
-                                        <span class="ti-heart"></span>
-                                        <span class="user-number">35</span>
-                                    </div>
-                                </div>
-                                <div class="courses-button f-right">
-                                    <a href="course_details.html">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-12">
-                        <div class="courses-wrapper course-radius-none mb-30">
-                            <div class="courses-thumb">
-                                <a href="course_details.html"><img
-                                        src=" {{ asset('asset/img/courses/single_courses_thumb_03.jpg') }} "
-                                        alt=""></a>
-                            </div>
-                            <div class="courses-author">
-                                <img src="{{ asset('asset/img/courses/coursesauthor1.png') }}" alt="">
-                            </div>
-                            <div class="course-main-content clearfix">
-                                <div class="courses-content">
-                                    <div class="courses-category-name">
-                                        <span>
-                                            <a href="#">Business</a>
-                                        </span>
-                                    </div>
-                                    <div class="courses-heading">
-                                        <h1><a href="course_details.html">English For Tommorow</a></h1>
-                                    </div>
-                                    <div class="courses-para">
-                                        <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="courses-wrapper-bottom clearfix">
-                                <div class="courses-icon d-flex f-left">
-                                    <div class="courses-single-icon">
-                                        <span class="ti-user"></span>
-                                        <span class="user-number">35</span>
-                                    </div>
-                                    <div class="courses-single-icon">
-                                        <span class="ti-heart"></span>
-                                        <span class="user-number">35</span>
-                                    </div>
-                                </div>
-                                <div class="courses-button f-right">
-                                    <a href="course_details.html">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-12">
-                        <div class="courses-wrapper course-radius-none mb-30">
-                            <div class="courses-thumb">
-                                <a href="course_details.html"><img
-                                        src=" {{ asset('asset/img/courses/single_courses_thumb_04.jpg') }} "
-                                        alt=""></a>
-                            </div>
-                            <div class="courses-author">
-                                <img src=" {{ asset('asset/img/courses/coursesauthor1.png') }} " alt="">
-                            </div>
-                            <div class="course-main-content clearfix">
-                                <div class="courses-content">
-                                    <div class="courses-category-name">
-                                        <span>
-                                            <a href="#">English</a>
-                                        </span>
-                                    </div>
-                                    <div class="courses-heading">
-                                        <h1><a href="course_details.html">English For Tommorow</a></h1>
-                                    </div>
-                                    <div class="courses-para">
-                                        <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque malesuada.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="courses-wrapper-bottom clearfix">
-                                <div class="courses-icon d-flex f-left">
-                                    <div class="courses-single-icon">
-                                        <span class="ti-user"></span>
-                                        <span class="user-number">35</span>
-                                    </div>
-                                    <div class="courses-single-icon">
-                                        <span class="ti-heart"></span>
-                                        <span class="user-number">35</span>
-                                    </div>
-                                </div>
-                                <div class="courses-button f-right">
-                                    <a href="course_details.html">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
+
                 </div>
             </div>
         </div>
@@ -493,102 +291,28 @@
             </div>
             <div class="team-list">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="team-wrapper mb-30">
-                            <div class="team-thumb">
-                                <img src=" {{ asset('asset/img/team/teammember1.jpg') }} " alt="">
-                            </div>
-                            <div class="team-social-info text-center">
-                                <div class="team-social-para">
-                                    <p>Belis nisl adipiscing sapien malesu diame lacus eget erats</p>
+                    @foreach ($dosen as $ds)
+                        <div class="col-xl-3 col-lg-3 col-md-6">
+                            <div class="team-wrapper mb-30">
+                                <div class="team-thumb">
+                                    <img src=" {{ asset('asset/img/team/teammember1.jpg') }} " alt="">
                                 </div>
-                                <div class="team-social-icon-list">
-                                    <ul>
-                                        <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                        <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                        <li><a href="#"><span class="ti-google"></span></a></li>
-                                        <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                                    </ul>
+                                <div class="team-social-info text-center">
+                                    <div class="team-social-para">
+                                        <p></p>
+                                    </div>
+                                    <div class="team-social-icon-list">
+                                        <ul>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="team-teacher-info text-center">
-                                <h1>Chase M. Bynum</h1>
-                                <h2>English Teacher</h2>
+                                <div class="team-teacher-info text-center">
+                                    <h1> {{ $ds->nama_dosen }}</h1>
+                                    <h2>NIDN {{ $ds->NIDN }}</h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="team-wrapper mb-30">
-                            <div class="team-thumb">
-                                <img src=" {{ asset('asset/img/team/teammember2.jpg') }} " alt="">
-                            </div>
-                            <div class="team-social-info text-center">
-                                <div class="team-social-para">
-                                    <p>Belis nisl adipiscing sapien malesu diame lacus eget erats</p>
-                                </div>
-                                <div class="team-social-icon-list">
-                                    <ul>
-                                        <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                        <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                        <li><a href="#"><span class="ti-google"></span></a></li>
-                                        <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-teacher-info text-center">
-                                <h1>Brenda C. Garcia</h1>
-                                <h2>CSE Teacher</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="team-wrapper mb-30">
-                            <div class="team-thumb">
-                                <img src=" {{ asset('asset/img/team/teammember3.jpg') }} " alt="">
-                            </div>
-                            <div class="team-social-info text-center">
-                                <div class="team-social-para">
-                                    <p>Belis nisl adipiscing sapien malesu diame lacus eget erats</p>
-                                </div>
-                                <div class="team-social-icon-list">
-                                    <ul>
-                                        <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                        <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                        <li><a href="#"><span class="ti-google"></span></a></li>
-                                        <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-teacher-info text-center">
-                                <h1>Marc K. Bruhn</h1>
-                                <h2>Math Teacher</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="team-wrapper mb-30">
-                            <div class="team-thumb">
-                                <img src="{{ asset('asset/img/team/teammember4.jpg') }} " alt="">
-                            </div>
-                            <div class="team-social-info text-center">
-                                <div class="team-social-para">
-                                    <p>Belis nisl adipiscing sapien malesu diame lacus eget erats</p>
-                                </div>
-                                <div class="team-social-icon-list">
-                                    <ul>
-                                        <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                        <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                        <li><a href="#"><span class="ti-google"></span></a></li>
-                                        <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-teacher-info text-center">
-                                <h1>Mary M. Douglas</h1>
-                                <h2>English Teacher</h2>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -605,7 +329,9 @@
                             <h1 class="white-color">Agenda</h1>
                         </div>
                         <div class="section-title-para">
-                            <p class="white-color">Beberapa agenda acara pada Program Studi Informatika yang akan datang.</p>
+                            <p class="white-color">Beberapa agenda acara pada Program Studi Informatika yang
+                                akan datang.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -613,40 +339,44 @@
             <div class="events-list mb-30">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6">
-                        <div class="single-events mb-30">
-                            <div class="events-wrapper">
-                                <div class="events-inner d-flex">
-                                    <div class="events-thumb">
-                                        <img src=" {{ asset('asset/img/events/eventsthumb1.png') }}  " alt="">
-                                    </div>
-                                    <div class="events-text white-bg">
-                                        <div class="event-text-heading mb-20">
-                                            <div class="events-calendar text-center f-left">
-                                                <span class="date">25</span>
-                                                <span class="month">Sep, 2018</span>
-                                            </div>
-                                            <div class="events-text-title clearfix">
-                                                <a href="#">
-                                                    <h4>Business Conferences</h4>
-                                                </a>
-                                                <div class="time-area">
-                                                    <span class="ti-time"></span>
-                                                    <span class="published-time">05:23 AM - 09:23 AM</span>
+                        @foreach ($berita as $bt)
+                            @if (trim(strtolower($bt->kategori)) == 'event')
+                                <div class="single-events mb-30">
+                                    <div class="events-wrapper">
+                                        <div class="events-inner d-flex">
+                                            {{-- <div class="events-thumb">
+                                                <img src=" {{ asset('asset/foto_berita/'. $bt->gambar) }} "
+                                                    alt="" style="">
+                                            </div> --}}
+                                            <div class="events-text white-bg">
+                                                <div class="event-text-heading mb-20">
+                                                    <div class="events-calendar text-center f-left">
+                                                        <span class="date">
+                                                            {{ \Carbon\Carbon::parse($bt->tgl_berita)->format('d') }}
+                                                        </span>
+                                                        <span
+                                                            class="month">{{ \Carbon\Carbon::parse($bt->tgl_berita)->translatedFormat('M Y') }}</span>
+                                                    </div>
+                                                    <div class="events-text-title clearfix">
+                                                        <a href="#">
+                                                            <h4> {{ $bt->judul }}</h4>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="events-para">
+                                                    <p> {{ \Illuminate\Support\Str::limit($bt->deskripsi, 120, '...') }}
+                                                    </p>
+                                                </div>
+                                                <div class="events-speaker">
+                                                    <h2>Speaker : <span>Alexzender</span></h2>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="events-para">
-                                            <p>Event is veries fermentum consequat mi fonec has fermentum ellentesque
-                                                malesuada.</p>
-                                        </div>
-                                        <div class="events-speaker">
-                                            <h2>Speaker : <span>Alexzender</span></h2>
-                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="single-events mb-30">
+                            @endif
+                        @endforeach
+                        {{-- <div class="single-events mb-30">
                             <div class="events-wrapper">
                                 <div class="events-inner d-flex">
                                     <div class="events-thumb">
@@ -678,9 +408,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
-                    <div class="col-xl-6 col-lg-6">
+                    {{-- <div class="col-xl-6 col-lg-6">
                         <div class="single-events mb-30">
                             <div class="events-wrapper">
                                 <div class="events-inner d-flex">
@@ -747,7 +477,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="events-view-btn">
@@ -772,7 +502,9 @@
                             <h1 class="primary-color">Testimoni</h1>
                         </div>
                         <div class="section-title-para">
-                            <p class="gray-color">Beberapa Testimoni dari Alumni Lulusan Universitas Pignatelli Triputra.</p>
+                            <p class="gray-color">Beberapa Testimoni dari Alumni Lulusan Universitas Pignatelli
+                                Triputra.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -782,7 +514,7 @@
 
                     @foreach ($testimoni as $ts)
                         <div class="col-xl-12">
-                            <div class="testimonilas-wrapper mb-110">
+                            <div class="testimonilas-wrapper mb-110 ">
                                 <div class="testimonilas-heading d-flex">
                                     <div class="testimonilas-author-thumb">
                                         <img src="img/testimonials/testimonilas_author_thumb1.png" alt="">
@@ -793,7 +525,7 @@
                                     </div>
                                 </div>
                                 <div class="testimonilas-para">
-                                    <p>{{ $ts->ulasan }}.</p>
+                                    <p>{{ Str::limit($ts->ulasan, 150) }}.</p>
                                 </div>
                                 <div class="testimonilas-rating">
                                     <ul>

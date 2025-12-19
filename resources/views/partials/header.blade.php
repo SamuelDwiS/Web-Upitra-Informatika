@@ -30,7 +30,10 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="header-bottom">
+                            <a href="{{route('home')}}">
                              <img src="{{asset('asset/logo_upitra.png')}}" alt="" width="75" height="auto">
+                            
+                            </a>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-6 col-6">
                             <div class="header-bottom-icon f-right">

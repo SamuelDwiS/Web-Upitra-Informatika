@@ -12,14 +12,14 @@
                         <h1>Ka.Prodi</h1>
                     </div>
                     <div class="about-content about-content-2">
-                        <h4>Nama Prodi</h4>
+                        <h4>Endang Anggiratih, ST, M.Cs</h4>
                         <p>Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
             </div>
             <div class="col-xl-5 col-lg-5">
                 <div class="about-right-img mb-30">
-                    <img src="{{asset('asset/img/about/about-right002.png')}}" alt="">
+                    <img src="{{asset('asset/foto_dosen/kaprodi_inf.jpg')}}" alt="">
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
                         <h1 class="primary-color">Staff Dosen Pengampu</h1>
                     </div>
                     <div class="section-title-para">
-                        <p class="gray-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scelerisqu Nullam arcu liquam here was consequat.</p>
+                        <p class="gray-color">Daftar dosen yang saat ini masih mengajar Program Studi Informatika.</p>
                     </div>
                 </div>
             </div>

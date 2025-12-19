@@ -3,12 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\Berita;
+use App\Models\Dosen;
+use App\Models\Matkul;
+use App\Models\Testimoni;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
+    public function dashboard()
+    {
+        $testimoni = Testimoni::count();
+        $matkul = Matkul::count();
+        $berita = Berita::count();
+        $dosen = Dosen::count();
+        return view('admin.dashboard', compact('testimoni', 'matkul', 'berita', 'dosen'));
+    }
 
     public function login()
     {
@@ -27,7 +40,7 @@ class AdminController extends Controller
             // $user = Auth::user();
 
             $request->session()->regenerate();
-            return redirect()->intended('admin/dashboard');
+            return redirect()->route('admin.dashboard');
         }
 
         return back()->withErrors([

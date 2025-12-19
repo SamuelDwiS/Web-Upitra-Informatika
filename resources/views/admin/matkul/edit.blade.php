@@ -3,7 +3,7 @@
 
 @section('admin.layouts')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Tambah Mata Kuliah</h1>
+        <h1 class="mt-4">Edit Mata Kuliah</h1>
 
         <div class="card mb-4">
             <div class="card-body">

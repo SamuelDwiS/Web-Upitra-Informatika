@@ -10,10 +10,6 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Attributes\Layout;
 
-Route::get('home', function () {
-    return view('layouts/home');
-})->name('home');
-
 Route::get('berita', function () {
     return view('layouts/berita');
 })->name('berita');
@@ -27,6 +23,7 @@ Route::get('dosen', function () {
 })->name('dosen');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index']);
 Route::get('matkul', [MatkulController::class, 'list_matkul'])->name('matkul');
 Route::get('berita', [BeritaController::class, 'list_berita'])->name('berita');
 Route::get('dosen', [DosenController::class, 'list_dosen'])->name('dosen');
@@ -41,19 +38,17 @@ Route::get('admin', [AdminController::class, 'login'])->name('login');
 Route::post('admin', [AdminController::class, 'login_action'])->name('login_action');
 Route::post('password', [AdminController::class, 'password_action'])->name('password_action');
 Route::get('logout', [AdminController::class, 'logout'])->name('logout');
-Route::get('admin/dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard');
 
+Route::prefix('admin')
+    ->middleware('auth:admin')
+    ->name('admin.')
+    ->group(function () {
 
-Route::prefix('admin')->name('admin.') ->group(function () {
+        Route::get('dashboard', [AdminController::class, 'dashboard'])
+            ->name('dashboard');
 
-
-    Route::resource('matkul', \App\Http\Controllers\MatkulController::class);
-    Route::resource('berita', \App\Http\Controllers\BeritaController::class);
-    Route::resource('dosen', \App\Http\Controllers\DosenController::class);
-    Route::resource('testimoni', \App\Http\Controllers\TestimoniController::class);
-
-    // Dosen
-    // Route::get('/dosen', [DosenController::class, 'index'])->name('admin.dosen.index');
-    // Route::get('/dosen/create', [DosenController::class, 'create'])->name('admin.dosen.create');
-
+        Route::resource('matkul', MatkulController::class);
+        Route::resource('berita', BeritaController::class);
+        Route::resource('dosen', DosenController::class);
+        Route::resource('testimoni', TestimoniController::class);
 });

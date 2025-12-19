@@ -25,32 +25,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 col-lg-8">
-                    <div class="single-blog blog-wrapper blog-list blog-details blue-blog mb-40">
-                        @foreach ($berita as $bt)
-
+                    @foreach ($berita as $bt)
+                        <div class="single-blog blog-wrapper blog-list blog-details blue-blog mb-40">
                             <div class="single-blog-main-content mb-30">
-                                <div class="blog-thumb mb-35">
-                                    <a href="news_details.html"><img src="img/blog/news_details_thumb_02.jpg"
-                                            alt=""></a>
+                                <div class="blog-thumb mb-35 ">
+                                    <a href="news_details.html"
+                                        style=" align-items: center; justify-content: center; display: flex;"> <img
+                                            src="{{ asset('asset/foto_berita/' . $bt->gambar) }}" alt=""
+                                            style="width:95%; padding-top:10px;  height:auto; object-fit:cover; border-radius:4px;"></a>
                                     <span class="blog-text-offer">{{ $bt->kategori }}</span>
                                 </div>
                                 <div class="blog-content news-content">
                                     <div class="blog-meta news-meta">
-                                        <span>{{ $bt->tgl_berita }}</span>
+                                        <span class="blog-date">
+                                            <i class="ti-calendar"></i> {{ $bt->tgl_berita }}
+                                        </span>
                                     </div>
-                                    <div style="width:100%; overflow:hidden;">
-                                        <img src="{{ asset('asset/foto_berita/' . $bt->gambar) }}" alt=""
-                                            style="width:100%; height:auto; object-fit:cover; border-radius:4px;">
-                                        <h5 style="font-size:20px; margin-top:10px;">{{ $bt->judul }}</h5>
-                                        <p>{{ $bt->deskripsi }}</p>
-                                    </div>
-                                    <a href="news_details.html" class="blog-read-more-btn">Baca Selengkapnya</a>
+                                    <h5><a href="news_details.html">{{ $bt->judul }}.</a></h5>
+                                    <p>{{ $bt->deskripsi }}.</p>
+                                    <a href="news_details.html" class="blog-read-more-btn">Read more</a>
                                 </div>
                             </div>
-                        @endforeach
-
-                    </div>
-
+                        </div>
+                    @endforeach
                     <div class="row">
                         <div class="col-xl-12">
                             <nav class="course-pagination mt-10 mb-30" aria-label="Page navigation example">
@@ -146,7 +143,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            @endforeach
+                                        @endforeach
                                     </li>
                                 </ul>
                             </div>
