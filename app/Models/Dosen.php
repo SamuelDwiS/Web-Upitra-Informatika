@@ -12,6 +12,8 @@ class Dosen extends Model
     protected $fillable = [
         'NIDN',
         'nama_dosen',
+        'spesialisasi',
+        'deskripsi',
         'foto',
     ];
 }

@@ -17,9 +17,9 @@
                                   <div class="footer-social-icon-list">
                                       <ul>
                                           <li><a href="#"><span class="fab fa-facebook"></span></a></li>
-                                          <li><a href="#"><span class="fab fa-google"></span></a></li>
-                                          <li><a href="#"><span class="fab fa-whatsapp"></span></a></li>
-                                          <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                                          <li><a href="https://share.google/utUIZHX8eAm1b2Rdj"><span class="fab fa-google"></span></a></li>
+                                          <li><a href=" https://wa.me/628112907500"><span class="fab fa-whatsapp"></span></a></li>
+                                          <li><a href="https://www.instagram.com/upitra_campus/"><span class="fab fa-instagram"></span></a></li>
                                       </ul>
                                   </div>
                               </div>
@@ -35,9 +35,9 @@
                                       <li><a href="#">Home</a></li>
                                       <li><a href="{{ route('dosen') }}">Dosen</a></li>
                                       <li><a href="#">Post Terkini</a></li>
-                                      <li><a href="#">Berita</a></li>
+                                      <li><a href="{{ route('berita') }}">Berita</a></li>
                                       <li><a href="#">Pengumuman</a></li>
-                                      <li><a href="#">Mata Kuliah</a></li>
+                                      <li><a href="{{ route('matkul') }}">Mata Kuliah</a></li>
                                       <li><a href="#">Hubungi Kami</a></li>
                                       <li><a href="#">Tentang Kami</a></li>
 

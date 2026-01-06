@@ -29,21 +29,25 @@
                         <div class="single-blog blog-wrapper blog-list blog-details blue-blog mb-40">
                             <div class="single-blog-main-content mb-30">
                                 <div class="blog-thumb mb-35 ">
-                                    <a href="news_details.html"
-                                        style=" align-items: center; justify-content: center; display: flex;"> <img
-                                            src="{{ asset('asset/foto_berita/' . $bt->gambar) }}" alt=""
-                                            style="width:95%; padding-top:10px;  height:auto; object-fit:cover; border-radius:4px;"></a>
-                                    <span class="blog-text-offer">{{ $bt->kategori }}</span>
+                                    <a href="" style=" align-items: center; justify-content: center; display: flex;"> 
+                                        <img src="{{ asset('storage/' . $bt->gambar) }}" alt="" style="width:95%; padding-top:10px;  height:auto; object-fit:cover; border-radius:4px;">
+                                        </a>
+                                    {{-- <img src="{{ asset('storage/' . $bt->gambar) }}" alt=""
+                                        style="width:95%; padding-top:10px;  height:auto; object-fit:cover; border-radius:4px;"> --}}
+
+                                    <span class="blog-text-offer">Berita</span>
                                 </div>
                                 <div class="blog-content news-content">
                                     <div class="blog-meta news-meta">
                                         <span class="blog-date">
-                                            <i class="ti-calendar"></i> {{ $bt->tgl_berita }}
+                                            <i class="ti-calendar"></i>
+                                            {{ \Carbon\Carbon::parse($bt->tgl_berita)->translatedFormat('d F, Y') }}
                                         </span>
                                     </div>
-                                    <h5><a href="news_details.html">{{ $bt->judul }}.</a></h5>
-                                    <p>{{ $bt->deskripsi }}.</p>
-                                    <a href="news_details.html" class="blog-read-more-btn">Read more</a>
+                                    <h5><a href="{{ route('detail-berita', $bt->slug) }}">{{ $bt->judul }}.</a></h5>
+                                    <p>{{ \illuminate\Support\Str::limit($bt->deskripsi, 255) }}</p>
+                                    <a href="{{ route('detail-berita', $bt->slug) }}" class="blog-read-more-btn">Read
+                                        more</a>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +143,8 @@
                                                         <a href="blog-details.html"> {{ $bt->judul }}</a>
                                                     </h4>
                                                     <div class="widget-advisors-name">
-                                                        <span>Advisor : <span class="f-500">Marcelo</span></span>
+                                                        <span>Diupload: <span
+                                                                class="f-500">{{ $bt->author }}</span></span>
                                                     </div>
                                                 </div>
                                             </div>

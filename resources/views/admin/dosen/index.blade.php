@@ -13,9 +13,9 @@
                 <table id="datatablesSimple" class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>ID Dosen</th>
                             <th>NIDN</th>
                             <th>Nama Dosen</th>
+                            <th>Spesialisasi</th>
                             <th>Foto Dosen</th>
                             <th>Aksi</th>
                         </tr>
@@ -24,19 +24,21 @@
                     <tbody>
                         @foreach ($data as $ds)
                             <tr>
-                                <td>{{ $ds->id_dosen }}</td>
                                 <td>{{ $ds->NIDN }}</td>
                                 <td>{{ $ds->nama_dosen }}</td>
-                                <td>{{ $ds->foto }}</td>
+                                <td>{{ $ds->spesialisasi }}</td>
+                                <td><img src="{{ asset('storage/' . $ds->foto) }}" alt="Foto Dosen" width="100"></td>
                                 <td>
-                                    <a href="{{ route('admin.dosen.edit', $ds->id_dosen) }}" class="btn btn-warning btn-sm me-1">
+                                    <a href="{{ route('admin.dosen.edit', $ds->id_dosen) }}"
+                                        class="btn btn-warning btn-sm me-1">
                                         <i class="fas fa-edit"></i> Edit
                                     </a>
                                     <form action="{{ route('admin.dosen.destroy', $ds->id_dosen) }}" method="POST"
                                         style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" onclick="return confirm('Yakin ingin hapus data Dosen {{ $ds->nama_dosen }}?')"
+                                        <button type="submit"
+                                            onclick="return confirm('Yakin ingin hapus data Dosen {{ $ds->nama_dosen }}?')"
                                             class="btn btn-danger btn-sm">
                                             <i class="fas fa-trash-alt"></i> Hapus
                                         </button>
@@ -45,10 +47,9 @@
                             </tr>
                         @endforeach
                     </tbody>
-                    
+
                 </table>
             </div>
         </div>
     </div>
 @endsection
-

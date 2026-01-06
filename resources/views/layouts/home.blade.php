@@ -1,11 +1,11 @@
 @extends('app')
-
 @section('content')
     <div class="slider-area pos-relative">
         <div class="slider-active">
-            <div class="single-slider slider-height d-flex align-items-center justify-content-center"
-                style="background-image: url( {{ asset('asset/img/slider/slider_bg_1.jpg') }});">
-                <div class="container">
+            <div class="single-slider slider-height d-flex align-items-center"
+                style="background-image: url( {{ asset('asset/img/slider/slide-4.jpg') }});">
+                <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);"></div>
+                <div class="container" style="position:relative; z-index:2;">
                     <div class="row">
                         <div class="col-xl-9 col-md-12">
                             <div class="slider-content slider-content-2">
@@ -21,9 +21,10 @@
                     </div>
                 </div>
             </div>
-            <div class="single-slider slider-height d-flex align-items-center justify-content-center"
-                style="background-image: url( {{ asset('asset/img/slider/2.jpg') }} );">
-                <div class="container">
+            <div class="single-slider slider-height d-flex align-items-center"
+                style="background-image: url( {{ asset('asset/img/slider/slider-2.jpg') }} );">
+                <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);"></div>
+                <div class="container" style="position:relative; z-index:2;">
                     <div class="row">
                         <div class="col-xl-8 col-md-12 offset-xl-2">
                             <div class="slider-content slider-content-2 text-center">
@@ -33,26 +34,26 @@
                                 <p data-animation="fadeInUp" data-delay=".4s">Excellence through Unity, People, and
                                     Transformation.</p>
                                 <button class="theme-btn" data-animation="fadeInUp" data-delay=".6s"><span
-                                        class="btn-text">admit now</span></button>
+                                        class="btn-text">Daftar Sekarang</span></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="single-slider slider-height d-flex align-items-center justify-content-center"
-                style="background-image: url( {{ asset('asset/img/slider/3.jpg') }} );">
-                <div class="container">
+            <div class="single-slider slider-height d-flex align-items-center"
+                style="background-image: url( {{ asset('asset/img/slider/slide-3.jpg') }} );">
+                <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);"></div>
+                <div class="container" style="position:relative; z-index:2;">
                     <div class="row">
                         <div class="col-xl-9 col-md-12">
                             <div class="slider-content slider-content-2">
                                 <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">
                                     <span>Admition Going On</span><br>Eduara University
                                 </h1>
-                                <p data-animation="fadeInUp" data-delay=".4s">Sorem ipsum dolor sit amet consectetur
-                                    adipisicing elit sed do eiusmod tempor <br> incididunt ut labore et dolore magna
-                                    aliqua enim ad minime.</p>
+                                <p data-animation="fadeInUp" data-delay=".4s">Excellence through Unity, People, and
+                                    Transformation.</p>
                                 <button class="theme-btn" data-animation="fadeInUp" data-delay=".6s"><span
-                                        class="btn-text">admit now</span></button>
+                                        class="btn-text">daftar sekarang</span></button>
                             </div>
                         </div>
                     </div>
@@ -81,8 +82,12 @@
                             Prodi Informatika UPITRA menekankan pada penguasaan teknologi terkini dan keterampilan praktis
                             yang relevan dengan dunia kerja.</p>
 
-                        <button class="theme-btn blue-bg-border mt-20"><span class="btn-text">Baca
-                                Selengkapnya</span></button>
+                        <a href="{{ route('about') }}">
+                            <button class="theme-btn blue-bg-border mt-20">
+                                <span class="btn-text">Baca Selengkapnya</span>
+                            </button>
+                        </a>
+
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-5">
@@ -93,115 +98,9 @@
             </div>
 
 
-
-            <div class="row pt-65">
-                <div class="col-xl-12 col-lg-12 col-md-6">
-                    <div class="feature-wrapper mb-30">
-                        <div class="feature-title-heading">
-                            <h3>Visi</h3>
-                            <span>01</span>
-                        </div>
-                        <div class="feature-text">
-                            <p>Program studi yang unggul dalam bidang informatika, berorientasi global, menjunjung tinggi
-                                nilai-nilai integritas dan bersemangat kebhinekaan.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-12 col-lg-12 col-md-6">
-                    <div class="feature-wrapper mb-30">
-                        <div class="feature-title-heading">
-                            <h3>Misi</h3>
-                            <span>02</span>
-                        </div>
-                        <div class="feature-text">
-                            <p>
-                                1. Menyelenggarakan program studi informatika secara efektif dan efisien untuk mendukung
-                                terlaksananya tri dharma perguruan tinggi.<br>
-                                2. Menghasilkan sarjana informatika yang kompeten, kompetitif, memiliki pola pikir logis,
-                                sistematis, kedalaman spiritual, kemanusiaan, kemampuan berjejaring, dan profesional dalam
-                                memanfatkan bidang ilmu informatika di lingkungan kerja.<br>
-                                3. Menghasilkan penelitian yang unggul, kreatif, inovatif dan transformatif bagi masyarakat
-                                di bidang informatika.<br>
-                                4. Memanfaatkan bidang ilmu informatika yang berdaya guna bagi masyarakat.<br>
-                                5. Membangun kerja sama dan mengelola jejaring berkelanjutan dengan dunia pendidikan,
-                                masyarakat, pemerintah dan industri untuk mewujudkan keunggulan transformatif di bidang
-                                informatika.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-12 col-lg-12 col-md-6">
-                    <div class="feature-wrapper mb-30">
-                        <div class="feature-title-heading">
-                            <h3>Tujuan</h3>
-                            <span>03</span>
-                        </div>
-                        <div class="feature-text">
-                            <p>
-                                1. Berkontribusi dalam memperluas akses pendidikan tinggi yang berkualitas dan terjangkau
-                                bagi masyarakat di bidang informatika.<br>
-                                2. Menghasilkan sarjana bidang informatika yang bermoral, berintegritas, profesional,
-                                bertanggung jawab, dan mampu berkarya dengan ilmu informatika.<br>
-                                3. Berkontribusi dalam pengembangan dan penelitian perangkat lunak yang unggul, solutif,
-                                inovatif dan transformatif bagi masyarakat dan kehidupan.<br>
-                                4. Menerapkan ilmu informatika yang berdaya guna dan berhasil guna bagi masyarakat.<br>
-                                5. Menjalin kerja sama dengan dunia pendidikan, masyarakat, pemerintah dan industri yang
-                                berkelanjutan, beretika, dan bermanfaat di bidang informatika.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <!-- about end -->
-
-    <!-- pengumuman-start -->
-    <div id="blog" class="latest_news-area gray-bg pt-100 pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 offset-xl-3 col-md-8 offset-md-2">
-                    <div class="section-title mb-50 text-center">
-                        <div class="section-title-heading mb-20">
-                            <h1 class="primary-color">Pengumuman</h1>
-                        </div>
-                        <div class="section-title-para">
-                            <p class="gray-color">Beberapa berita acara terkini pada Program Studi Informatika.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                @foreach ($berita as $bt)
-                    @if (trim(strtolower($bt->kategori)) == 'berita')
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="blog-wrapper mb-30">
-                                <div class="blog-thumb mb-25">
-                                    <a href="news_details.html"><img src=" {{ asset('asset/img/blog/blog_thumb_1.jpg') }}"
-                                            alt=""></a>
-                                    <span class="blog-category">news</span>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <span
-                                            class="month">{{ \Carbon\Carbon::parse($bt->tgl_berita)->translatedFormat('M D Y') }}</span>
-                                    </div>
-                                    <h5><a href="{{ route('berita') }}">{{ $bt->judul }}.</a></h5>
-                                    <p>{{ \Illuminate\Support\Str::limit($bt->deskripsi, 80, '...') }}</p>
-                                    <div class="read-more-btn">
-                                        <button><a href="{{ route('berita') }}">Read more</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                @endforeach
-            </div>
-        </div>
-    </div>
-    <!-- pengumuman-end -->
 
     <!-- courses start -->
     <div id="courses" class="courses-area courses-bg-height pt-100 pb-70"
@@ -211,7 +110,7 @@
                 <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="section-title mb-50 text-center">
                         <div class="section-title-heading mb-20">
-                            <h1 class="white-color">Mata Kuliah Program Studi</h1>
+                            <h1 class="white-color">Agenda</h1>
                         </div>
                         <div class="section-title-para">
                             <p class="white-color">Beberapa Mata Kuliah yang terdapat pada Program Studi
@@ -222,7 +121,7 @@
             </div>
             <div class="courses-list">
                 <div class="row courses-active">
-                    @foreach ($matkul as $mk)
+                    @foreach ($agenda as $agnd)
                         <div class="col-xl-12">
                             <div class="courses-wrapper course-radius-none mb-30">
                                 {{-- <div class="courses-thumb">
@@ -237,11 +136,11 @@
                                     <div class="courses-content">
                                         <div class="courses-category-name">
                                             <span>
-                                                <a href="#">Semester {{ $mk->semester }}</a>
+                                                <a href="#">Semester {{ $agnd->judul }}</a>
                                             </span>
                                         </div>
                                         <div class="courses-heading">
-                                            <h1><a href="course_details.html">{{ $mk->nama_matkul }}</a></h1>
+                                            <h1><a href="course_details.html">{{ $agnd->slug }}</a></h1>
                                         </div>
                                         <div class="courses-para">
                                             <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque
@@ -268,12 +167,218 @@
                             </div>
                         </div>
                     @endforeach
-
                 </div>
             </div>
         </div>
     </div>
     <!-- courses end -->
+
+    <!-- berita-start -->
+    <div id="blog" class="latest_news-area gray-bg pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                    <div class="section-title mb-50 text-center">
+                        <div class="section-title-heading mb-20">
+                            <h1 class="primary-color">Berita</h1>
+                        </div>
+                        <div class="section-title-para">
+                            <p class="gray-color">Beberapa berita acara terkini pada Program Studi Informatika.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach ($berita as $bt)
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="blog-wrapper mb-30">
+                            <div class="blog-thumb mb-25">
+                                <a href="news_details.html"><img src=" {{ asset('asset/img/blog/blog_thumb_1.jpg') }}"
+                                        alt=""></a>
+                                <span class="blog-category">news</span>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span
+                                        class="month">{{ \Carbon\Carbon::parse($bt->tgl_berita)->translatedFormat('F d, Y') }}</span>
+                                </div>
+                                <h5><a href="{{ route('berita') }}">{{ $bt->judul }}.</a></h5>
+                                <p>{{ \Illuminate\Support\Str::limit($bt->deskripsi, 80, '...') }}</p>
+                                <div class="blog-bottom-2 d-flex justify-content-between">
+                                    <div class="admin-blog-info">
+                                        <ul>
+                                            <li>By<span class="f-600"> Humas UPITRA</span></li>
+                                            <li class="blog-date-margin">
+                                                {{ \Carbon\Carbon::parse($bt->update_at)->translatedFormat('F d, Y') }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="read-more-btn text-right">
+                                        <button><a href="{{ route('berita') }}"></a> Read more</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            {{-- <div class="courses-view-more-area mt-20 mb-30 text-center">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="courses-view-more-btn">
+                            <a href=" {{ route('berita') }} ">
+                                <button class="btn gray-border-btn">view more</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+        </div>
+    </div>
+    <!-- berita-end -->
+
+    <!-- events start -->
+    {{-- <div id="events" class="events-area events-bg-height pt-100 pb-95"
+        style="background-image: url( {{ asset('asset/img/courses/courses_bg.png)') }} ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                    <div class="section-title mb-50 text-center">
+                        <div class="section-title-heading mb-20">
+                            <h1 class="white-color">Mata Kuliah</h1>
+                        </div>
+                        <div class="section-title-para">
+                            <p class="white-color">Beberapa pengumuman acara pada Program Studi Informatika yang akan
+                                datang.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="events-list mb-30">
+                <div class="row">
+                    @foreach ($berita as $pengumuman)
+                        @if (trim(strtolower($pengumuman->kategori)) == 'pengumuman')
+                            <div class="col-xl-4 col-md-6">
+                                <div class="single-events mb-30">
+                                    <div class="events-wrapper">
+                                        <div class="events-inner d-flex">
+                                            <div class="events-text events-text-3">
+                                                <div class="event-text-heading d-flex mb-20">
+                                                    <div class="events-calendar text-center">
+                                                        <span
+                                                            class="date">{{ \Carbon\Carbon::parse($pengumuman->tgl_berita)->translatedFormat('d') }}</span>
+                                                        <span
+                                                            class="month">{{ \Carbon\Carbon::parse($pengumuman->tgl_berita)->translatedFormat('m, Y') }}</span>
+                                                    </div>
+                                                    <div class="events-text-title events-text-title-3">
+                                                        <a href="#">
+                                                            <h4>Business Conferences</h4>
+                                                        </a>
+                                                        <div class="time-area">
+                                                            <span class="ti-time"></span>
+                                                            <span class="published-time">05:23 AM - 09:23 AM</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="events-para">
+                                                    <p>Event is veries fermentum consequat mi fonec has fermentum
+                                                        ellentesque
+                                                        malesuada.</p>
+                                                </div>
+                                                <div class="events-speaker">
+                                                    <h2>Speaker : <span>Alexzender</span></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+            <div class="events-view-btn">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="view-all-events text-center">
+                            <button class="yewello-btn">view all events<span>&rarr;</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+    <!-- events end -->
+
+    <!-- events start -->
+    <div id="events" class="events-area events-bg-height pt-100 pb-95"
+        style="background-image: url( {{ asset('asset/img/courses/courses_bg.png)') }} ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                    <div class="section-title mb-50 text-center">
+                        <div class="section-title-heading mb-20">
+                            <h1 class="white-color">Mata Kuliah</h1>
+                        </div>
+                        <div class="section-title-para">
+                            <p class="white-color">Beberapa mata kuliah pada Program Studi Informatika yang akan
+                                datang.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="events-list mb-30">
+                <div class="row">
+                    @foreach ($matkul as $mk)
+                        <div class="col-xl-4 col-md-6">
+                            <div class="single-events mb-30">
+                                <div class="events-wrapper">
+                                    <div class="events-inner d-flex">
+                                        <div class="events-text events-text-3">
+                                            <div class="event-text-heading d-flex mb-20">
+                                                <div class="events-calendar text-center">
+                                                    <span class="date">{{ $mk->sks }}</span>
+                                                    <span class="month">SKS</span>
+                                                </div>
+                                                <div class="events-text-title events-text-title-3">
+                                                    <a href="#">
+                                                        <h4>{{ $mk->nama_matkul }}</h4>
+                                                    </a>
+                                                    <div class="time-area">
+                                                        {{-- <span class="ti-time"></span> --}}
+                                                        <span class="published-time">Semester: {{ $mk->semester }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="events-para">
+                                                <p>{{ \illuminate\Support\Str::limit($mk->deskripsi, 80) }}</p>
+                                            </div>
+                                            {{-- <div class="events-speaker">
+                                                <h2>Speaker : <span>Alexzender</span></h2>
+                                            </div> --}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="events-view-btn">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="view-all-events text-center">
+                            <button class="yewello-btn">view all events<span>&rarr;</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- events end -->
+
     <!-- team start -->
     <div class="team-area pt-95 pb-70">
         <div class="container">
@@ -308,7 +413,7 @@
                                 </div>
                                 <div class="team-teacher-info text-center">
                                     <h1> {{ $ds->nama_dosen }}</h1>
-                                    <h2>NIDN {{ $ds->NIDN }}</h2>
+                                    <h2>{{ $ds->spesialisasi }}</h2>
                                 </div>
                             </div>
                         </div>
@@ -340,41 +445,39 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6">
                         @foreach ($berita as $bt)
-                            @if (trim(strtolower($bt->kategori)) == 'event')
-                                <div class="single-events mb-30">
-                                    <div class="events-wrapper">
-                                        <div class="events-inner d-flex">
-                                            {{-- <div class="events-thumb">
+                            <div class="single-events mb-30">
+                                <div class="events-wrapper">
+                                    <div class="events-inner d-flex">
+                                        {{-- <div class="events-thumb">
                                                 <img src=" {{ asset('asset/foto_berita/'. $bt->gambar) }} "
                                                     alt="" style="">
                                             </div> --}}
-                                            <div class="events-text white-bg">
-                                                <div class="event-text-heading mb-20">
-                                                    <div class="events-calendar text-center f-left">
-                                                        <span class="date">
-                                                            {{ \Carbon\Carbon::parse($bt->tgl_berita)->format('d') }}
-                                                        </span>
-                                                        <span
-                                                            class="month">{{ \Carbon\Carbon::parse($bt->tgl_berita)->translatedFormat('M Y') }}</span>
-                                                    </div>
-                                                    <div class="events-text-title clearfix">
-                                                        <a href="#">
-                                                            <h4> {{ $bt->judul }}</h4>
-                                                        </a>
-                                                    </div>
+                                        <div class="events-text white-bg">
+                                            <div class="event-text-heading mb-20">
+                                                <div class="events-calendar text-center f-left">
+                                                    <span class="date">
+                                                        {{ \Carbon\Carbon::parse($bt->published_at)->format('d') }}
+                                                    </span>
+                                                    <span
+                                                        class="month">{{ \Carbon\Carbon::parse($bt->published_at)->translatedFormat('M Y') }}</span>
                                                 </div>
-                                                <div class="events-para">
-                                                    <p> {{ \Illuminate\Support\Str::limit($bt->deskripsi, 120, '...') }}
-                                                    </p>
+                                                <div class="events-text-title clearfix">
+                                                    <a href="#">
+                                                        <h4> {{ $bt->judul }}</h4>
+                                                    </a>
                                                 </div>
-                                                <div class="events-speaker">
-                                                    <h2>Speaker : <span>Alexzender</span></h2>
-                                                </div>
+                                            </div>
+                                            <div class="events-para">
+                                                <p> {{ \Illuminate\Support\Str::limit($bt->deskripsi, 120, '...') }}
+                                                </p>
+                                            </div>
+                                            <div class="events-speaker">
+                                                <h2>Speaker : <span>Alexzender</span></h2>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            @endif
+                            </div>
                         @endforeach
                         {{-- <div class="single-events mb-30">
                             <div class="events-wrapper">
@@ -480,15 +583,7 @@
                     </div> --}}
                 </div>
             </div>
-            <div class="events-view-btn">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="view-all-events text-center">
-                            <button class="yewello-btn">view all events<span>&rarr;</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <!-- events end -->

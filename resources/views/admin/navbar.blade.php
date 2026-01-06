@@ -8,6 +8,20 @@
                         Dashboard
                     </a>
 
+                    {{-- Navbar Agenda --}}
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#gabungAgenda"
+                        aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"></div>
+                        Agenda
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="gabungAgenda" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ route('admin.agenda.index') }} ">Daftar Agenda</a>
+                            <a class="nav-link" href=" {{ route('admin.agenda.create') }} ">Tambah Agenda</a>
+                        </nav>
+                    </div>
+                    
                     {{-- Navbar Berita --}}
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#gabungBerita"
                         aria-expanded="false" aria-controls="collapseLayouts">

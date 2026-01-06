@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Kategori;
 
 class Berita extends Model
 {
@@ -12,9 +13,16 @@ class Berita extends Model
 
     protected $fillable = [
         'judul',
+        'slug',
         'deskripsi',
-        'tgl_berita',
-        'kategori',
+        'author',
+        'published_at',
+        'id_kategori',
         'gambar',
     ];
+
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class, 'id_kategori', 'id_kategori');
+    }
 }

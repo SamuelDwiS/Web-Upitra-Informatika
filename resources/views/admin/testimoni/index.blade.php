@@ -17,6 +17,7 @@
                             <th>Nama Alumni</th>
                             <th>Pekerjaan</th>
                             <th>Ulasan</th>
+                            <th>Foto Profil</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -27,6 +28,7 @@
                                 <td>{{ $ts->nm_alumni }}</td>
                                 <td>{{ $ts->pekerjaan }}</td>
                                 <td>{{ $ts->ulasan }}</td>
+                                <td><img src="{{ asset('storage/' . $ts->foto_profil) }}" alt="Foto Profil" width="100"></td>
                                 <td>
                                     <a href="{{ route('admin.testimoni.edit', $ts->id_testimoni) }}" class="btn btn-warning btn-sm">Edit</a>
                                     <form action="{{ route('admin.testimoni.destroy', $ts->id_testimoni) }}" method="POST"

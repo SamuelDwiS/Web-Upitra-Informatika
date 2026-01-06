@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('tb_berita', function (Blueprint $table) {
             $table->id('id_berita');
+            $table->unsignedBigInteger('id_kategori');
             $table->string('judul');
+            $table->string('slug', 150)->unique();
             $table->text('deskripsi');
-            $table->date('tgl_berita');
-            $table->string('kategori');
+            $table->string('author');
+            $table->date('published_at')->nullable();
             $table->string('gambar');
             $table->timestamps();
+            $table->foreign('id_kategori')->references('id_kategori')->on('tb_kategori')->onDelete('cascade');
         });
     }
 

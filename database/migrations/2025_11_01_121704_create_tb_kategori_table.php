@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tb_matkul', function (Blueprint $table) {
-            $table->id('id_matkul');
-            $table->string('kd_matkul')->unique();
-            $table->string('nama_matkul');
-            $table->string('sks');
-            $table->string('semester');
-            $table->string('deskripsi')->nullable();
+        Schema::create('tb_kategori', function (Blueprint $table) {
+            $table->id('id_kategori');
+            $table->string('kategori');    
+            $table->string('slug')->unique();    
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('tb_kategori');
     }
 };

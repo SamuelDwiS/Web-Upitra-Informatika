@@ -33,6 +33,18 @@ body {
     font-style: normal;
 }
 
+.single-slider {
+width: 100%;
+max-width: 100%;
+overflow: hidden;
+background-size: cover;
+background-position: center;
+}
+
+.slider-active {
+overflow: hidden;
+}
+
 .img {
     max-width: 100%;
     transition: all 0.3s ease-out 0s;

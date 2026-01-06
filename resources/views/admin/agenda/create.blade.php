@@ -3,7 +3,7 @@
 
 @section('admin.layouts')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Tambah Data Berita</h1>
+        <h1 class="mt-4">Tambah Data Agenda</h1>
 
         <div class="card mb-4">
             <div class="card-body">
@@ -16,22 +16,11 @@
                         </ul>
                     </div>
                 @endif
-                <form action="{{ route('admin.berita.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.agenda.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-
-                    <div class="mb-3">
-                        <label class="form-label">Kategori</label>
-                        <select class="form-select" name="id_kategori" id="kategori">
-                            <option value="">Pilih Kategori</option>
-                            @foreach ($kategori as $kt)
-                                <option value="{{ $kt->id_kategori }}">{{ $kt->kategori }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
                     <div class="mb-3">
                         <label class="form-label">Judul</label>
-                        <input type="text" name="judul" id="judul"  class="form-control" required>
+                        <input type="text" name="judul_agenda" id="judul_agenda"  class="form-control" required>
                     </div>
 
                     <div class="mb-3">
@@ -45,14 +34,23 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Author</label>
-                        <input type="text" name="author" class="form-control" placeholder="Admin Upitra"  required>
+                        <label class="form-label">Tanggal Mulai</label>
+                        <input type="date" name="tanggal_mulai" class="form-control" required>
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">Lokasi</label>
+                        <input type="text" name="lokasi" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Pembicara</label>
+                        <input type="text" name="pembicara" class="form-control" placeholder="Admin Upitra"  required>
+                    </div>
 
                     <div class="mb-3">
                         <label class="form-label">Foto Berita</label>
-                        <input type="file" name="gambar" class="form-control" required>
+                        <input type="file" name="gambar_poster" class="form-control" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Simpan</button>
@@ -62,18 +60,7 @@
     </div>
 
     <script>
-        document.getElementById('kategori').addEventListener('change', function() {
-            const selectedText = this.options[this.selectedIndex].text.toLowerCase();
-            const eventDate = document.getElementById('eventDate');
-
-            if (selectedText === 'agenda') {
-                eventDate.classList.remove('d-none');
-            } else {
-                eventDate.classList.add('d-none');
-            }
-        });
-
-        document.getElementById('judul').addEventListener('input', function() {
+        document.getElementById('judul_agenda').addEventListener('input', function() {
             const judul = this.value;
             const slug = judul.toLowerCase()
                 .replace(/ /g, '-')

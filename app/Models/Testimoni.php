@@ -13,5 +13,6 @@ class Testimoni extends Model
         'nm_alumni',
         'pekerjaan',
         'ulasan',
+        'foto_profil',
     ];
 }

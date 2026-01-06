@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_dosen');
             $table->string('NIDN');
             $table->string('nama_dosen');
+            $table->string('spesialisasi');
             $table->string('foto');
             $table->timestamps();
         });

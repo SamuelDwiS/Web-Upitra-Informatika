@@ -33,16 +33,18 @@ class DosenController extends Controller
             'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
-        $namafoto = null;
+        $path = null;
         if ($request->hasFile('foto')) {
             $namafoto = time() . '.' . $request->foto->extension();
-            $request->foto->move(public_path('asset/foto_dosen'), $namafoto);
+            $request->foto->move(public_path('storage/dosen'), $namafoto);
+            $path = 'dosen/' . $namafoto;
         }
 
         Dosen::create([
             'NIDN' => $request->NIDN,
             'nama_dosen' => $request->nama_dosen,
-            'foto' => $namafoto,
+            'spesialisasi' => $request->spesialisasi,
+            'foto' => $path,
         ]);
 
         return redirect()->route('admin.dosen.index')->with('success', 'Data Dosen Berhasil Ditambahkan!');
@@ -61,41 +63,44 @@ class DosenController extends Controller
         $request->validate([
             'NIDN' => 'required|unique:tb_dosen,NIDN,' . $dosen->id_dosen . ',id_dosen',
             'nama_dosen' => 'required',
+            'spesialisasi' => 'required',
             'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
         // default pakai foto lama
-        $nama_foto = $dosen->foto;
+        $namaFoto = $dosen->foto;
 
         // jika upload foto baru
         if ($request->hasFile('foto')) {
 
-            if (
-                $dosen->foto && $dosen->foto !== 'default.png'
-                && file_exists(public_path('asset/foto_dosen/' . $dosen->foto))
-            ) {
-                unlink(public_path('asset/foto_dosen/' . $dosen->foto));
+            if ($dosen->foto && file_exists(public_path('storage/' . $dosen->foto))) {
+                unlink(public_path('storage/' . $dosen->foto));
             }
 
             $file = $request->file('foto');
-            $nama_foto = time() . '.' . $file->extension();
-            $file->move(public_path('asset/foto_dosen'), $nama_foto);
+            $namaFile = time() . '.' . $file->extension();
+            $file->move(public_path('storage/dosen'), $namaFile);
+            $namaFoto = 'dosen/' . $namaFile;
         }
 
         $dosen->update([
             'NIDN' => $request->NIDN,
             'nama_dosen' => $request->nama_dosen,
-            'foto' => $nama_foto, 
+            'spesialisasi' => $request->spesialisasi,
+            'foto' => $namaFoto, 
         ]);
 
-        return redirect()->route('admin.dosen.index')
-            ->with('success', 'Data Dosen Berhasil Diupdate!');
+        return redirect()->route('admin.dosen.index')->with('success', 'Data Dosen Berhasil Diupdate!');
     }
 
 
     public function destroy($id)
-    {
-        Dosen::destroy($id);
+    {   
+        $dosen = Dosen::findOrFail($id);
+        if($dosen->foto && file_exists(public_path('storage/' . $dosen->foto))) {
+            unlink(public_path('storage/' . $dosen->foto));
+        }
+        $dosen->delete();
         return redirect()->route('admin.dosen.index')->with('success', 'Data Dosen berhasil dihapus!');
     }
 }

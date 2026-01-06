@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nm_alumni');
             $table->string('pekerjaan');
             $table->string('ulasan');
+            $table->string('foto_profil')->nullable();
             $table->timestamps();
         });
     }

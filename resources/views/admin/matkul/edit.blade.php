@@ -7,6 +7,15 @@
 
         <div class="card mb-4">
             <div class="card-body">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form action="{{ route('admin.matkul.update', $data->id_matkul) }}" method="POST">
                     @csrf
                     @method('PUT') 

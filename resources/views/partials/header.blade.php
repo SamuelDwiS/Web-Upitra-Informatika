@@ -5,27 +5,11 @@
             <div class="header-top primary-bg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-12">
-                            <div class="header-contact-info d-flex">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        {{-- <img src="{{asset('asset/logo.png') }}" alt=""> --}}
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-
-                        </div>
                     </div>
                 </div>
             </div>
             <!-- /end header-top -->
             <!-- header-bottom -->
-            {{-- <div class="">
-                <img src="{{asset('asset/logo_upitra.png') }}" alt="">
-            </div> --}}
             <div class="header-bottom-area header-sticky" style="transition: .6s;">
                 <div class="container">
                     <div class="row align-items-center">
@@ -44,17 +28,14 @@
                                     <ul>
                                         <li>
                                             <a href="{{route('home')}}">Profil</a>
-                                            {{-- <ul class="submenu">
+                                            <ul class="submenu">
                                                 <li>
-                                                    <a href="index.html">Home style 1</a>
+                                                    <a href="{{route('about')}}">Tentang UPITRA</a>
                                                 </li>
                                                 <li>
-                                                    <a href="index_2.html">Home style 2</a>
+                                                    <a href="{{route('about')}}">Fakultas Sains dan Teknologi</a>
                                                 </li>
-                                                <li>
-                                                    <a href="index_3.html">Home style 3</a>
-                                                </li>
-                                            </ul> --}}
+                                            </ul>
                                         </li>
                                         <li>
                                             <a href="#about">AKADEMIK</a>
@@ -80,14 +61,8 @@
                                                     <a href="{{route('berita')}}">Berita</a>
                                                 </li>
                                                 <li>
-                                                    <a href="events_02.html">Pengumuman</a>
+                                                    <a href="{{route('agenda')}}">Agenda</a>
                                                 </li>
-                                                {{-- <li>
-                                                    <a href="event_details.html">Events Details</a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop_pages.html">Shop</a>
-                                                </li> --}}
                                             </ul>
                                         </li>
                                         <li>
@@ -99,27 +74,21 @@
                                                 <li>
                                                     <a href="{{route('biaya_r')}}">Reguler</a>
                                                 </li>
-                                                {{-- <li>
-                                                    <a href="course_03.html">Courses 03</a>
-                                                </li>
-                                                <li>
-                                                    <a href="course_details.html">Course Details</a>
-                                                </li> --}}
                                             </ul>
                                         </li>
                                         <li>
                                             <a href="https://pmb.upitra.ac.id/">JALUR PENDAFTARAN</a>
-                                            {{-- <ul class="submenu">
+                                            <ul class="submenu">
                                                 <li>
-                                                    <a href="grid_news.html">Blog 3 Column</a>
+                                                    <a href="grid_news.html">Reguler</a>
                                                 </li>
                                                 <li>
-                                                    <a href="standard_blog.html">Blog Sidebar</a>
+                                                    <a href="standard_blog.html">Beasiswa</a>
                                                 </li>
                                                 <li>
-                                                    <a href="news_details.html">Blog Details</a>
+                                                    <a href="news_details.html">BeasiswaKIP Kuliah</a>
                                                 </li>
-                                            </ul> --}}
+                                            </ul>
                                         </li>
                                     </ul>
                                 </nav>

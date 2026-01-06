@@ -21,4 +21,5 @@ class AdminSeeder extends Seeder
             'password' => Hash::make('admin123'),
         ]);
     }
+
 }

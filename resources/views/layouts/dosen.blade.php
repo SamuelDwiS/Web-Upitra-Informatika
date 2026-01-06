@@ -49,13 +49,14 @@
                     <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="team-wrapper mb-30">
                             <div class="team-thumb">
-                                <img src="{{ asset('asset/foto_dosen/'. $ds->foto) }}" alt="">
+                                <img src="{{ asset('storage/foto_dosen/'. $ds->foto) }}" alt="">
                             </div>
 
                             <div class="team-teacher-info text-center">
                                 <h1>{{ $ds->nama_dosen }}</h1>
-                                <h2>NIDN</h2>
-                                <h2>{{ $ds->NIDN }}</h2>
+                                <h2>{{ $ds->spesialisasi }}</h2>
+                                <br>
+                                <h2>NIDN: {{ $ds->NIDN }}</h2>
                             </div>
                         </div>
                     </div>
