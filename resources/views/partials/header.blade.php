@@ -80,13 +80,13 @@
                                             <a href="https://pmb.upitra.ac.id/">JALUR PENDAFTARAN</a>
                                             <ul class="submenu">
                                                 <li>
-                                                    <a href="grid_news.html">Reguler</a>
+                                                    <a href="{{ route('biaya_r')}}">Reguler</a>
                                                 </li>
                                                 <li>
-                                                    <a href="standard_blog.html">Beasiswa</a>
+                                                    <a href="{{ route('biaya_r')}}">Beasiswa</a>
                                                 </li>
                                                 <li>
-                                                    <a href="news_details.html">BeasiswaKIP Kuliah</a>
+                                                    <a href="{{ route('biaya_r')}}">Beasiswa KIP-Kuliah</a>
                                                 </li>
                                             </ul>
                                         </li>

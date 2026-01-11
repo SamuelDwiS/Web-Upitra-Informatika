@@ -113,7 +113,7 @@
                             <h1 class="white-color">Agenda</h1>
                         </div>
                         <div class="section-title-para">
-                            <p class="white-color">Beberapa Mata Kuliah yang terdapat pada Program Studi
+                            <p class="white-color">Beberapa Agenda mendatang pada Program Studi
                                 Informatika.</p>
                         </div>
                     </div>
@@ -124,11 +124,11 @@
                     @foreach ($agenda as $agnd)
                         <div class="col-xl-12">
                             <div class="courses-wrapper course-radius-none mb-30">
-                                {{-- <div class="courses-thumb">
+                                <div class="courses-thumb">
                                     <a href="course_details.html"><img
-                                            src=" {{ asset('asset/img/courses/single_courses_thumb_01.jpg') }} "
+                                            src=" {{ asset('storage/' . $agnd->gambar_poster) }} "
                                             alt=""></a>
-                                </div> --}}
+                                </div>
                                 {{-- <div class="courses-author">
                                     <img src=" {{ asset('asset/img/courses/coursesauthor1.png') }}  " alt="">
                                 </div> --}}
@@ -136,33 +136,29 @@
                                     <div class="courses-content">
                                         <div class="courses-category-name">
                                             <span>
-                                                <a href="#">Semester {{ $agnd->judul }}</a>
+                                                <a href="#">Agenda</a>
                                             </span>
                                         </div>
                                         <div class="courses-heading">
-                                            <h1><a href="course_details.html">{{ $agnd->slug }}</a></h1>
+                                            <h1><a href=" {{ route('agenda') }}">{{ $agnd->judul_agenda }}</a></h1>
                                         </div>
                                         <div class="courses-para">
-                                            <p>Maecenas fermentum consequat mi fonec has fermentum ellentesque
-                                                malesuada.
-                                            </p>
+                                            <p>{{ $agnd->deskripsi }}</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="courses-wrapper-bottom clearfix">
                                     <div class="courses-icon d-flex f-left">
-                                        {{-- <div class="courses-single-icon">
+                                        <div class="courses-single-icon">
                                             <span class="ti-user"></span>
-                                            <span class="user-number">35</span>
+                                            <span class="user-number">{{  $agnd->pembicara}}</span>
                                         </div>
                                         <div class="courses-single-icon">
-                                            <span class="ti-heart"></span>
-                                            <span class="user-number">35</span>
-                                        </div> --}}
+                                            <span class="ti-calendar"></span>
+                                            <span class="user-number"> {{ \Carbon\Carbon::parse($agnd->tanggal_mulai)->translatedFormat('d F Y') }}</span>
+                                        </div>
                                     </div>
-                                    <div class="courses-button f-right">
-                                        <a href="{{ route('matkul') }}">View Details</a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -204,7 +200,7 @@
                                         class="month">{{ \Carbon\Carbon::parse($bt->tgl_berita)->translatedFormat('F d, Y') }}</span>
                                 </div>
                                 <h5><a href="{{ route('berita') }}">{{ $bt->judul }}.</a></h5>
-                                <p>{{ \Illuminate\Support\Str::limit($bt->deskripsi, 80, '...') }}</p>
+                                <p>{{ \Illuminate\Support\Str::limit($bt->deskripsi, 40, '...') }}</p>
                                 <div class="blog-bottom-2 d-flex justify-content-between">
                                     <div class="admin-blog-info">
                                         <ul>
@@ -224,7 +220,7 @@
                     </div>
                 @endforeach
             </div>
-            {{-- <div class="courses-view-more-area mt-20 mb-30 text-center">
+            <div class="courses-view-more-area mt-20 mb-30 text-center">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="courses-view-more-btn">
@@ -234,83 +230,10 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
         </div>
     </div>
     <!-- berita-end -->
-
-    <!-- events start -->
-    {{-- <div id="events" class="events-area events-bg-height pt-100 pb-95"
-        style="background-image: url( {{ asset('asset/img/courses/courses_bg.png)') }} ">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                    <div class="section-title mb-50 text-center">
-                        <div class="section-title-heading mb-20">
-                            <h1 class="white-color">Mata Kuliah</h1>
-                        </div>
-                        <div class="section-title-para">
-                            <p class="white-color">Beberapa pengumuman acara pada Program Studi Informatika yang akan
-                                datang.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="events-list mb-30">
-                <div class="row">
-                    @foreach ($berita as $pengumuman)
-                        @if (trim(strtolower($pengumuman->kategori)) == 'pengumuman')
-                            <div class="col-xl-4 col-md-6">
-                                <div class="single-events mb-30">
-                                    <div class="events-wrapper">
-                                        <div class="events-inner d-flex">
-                                            <div class="events-text events-text-3">
-                                                <div class="event-text-heading d-flex mb-20">
-                                                    <div class="events-calendar text-center">
-                                                        <span
-                                                            class="date">{{ \Carbon\Carbon::parse($pengumuman->tgl_berita)->translatedFormat('d') }}</span>
-                                                        <span
-                                                            class="month">{{ \Carbon\Carbon::parse($pengumuman->tgl_berita)->translatedFormat('m, Y') }}</span>
-                                                    </div>
-                                                    <div class="events-text-title events-text-title-3">
-                                                        <a href="#">
-                                                            <h4>Business Conferences</h4>
-                                                        </a>
-                                                        <div class="time-area">
-                                                            <span class="ti-time"></span>
-                                                            <span class="published-time">05:23 AM - 09:23 AM</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="events-para">
-                                                    <p>Event is veries fermentum consequat mi fonec has fermentum
-                                                        ellentesque
-                                                        malesuada.</p>
-                                                </div>
-                                                <div class="events-speaker">
-                                                    <h2>Speaker : <span>Alexzender</span></h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-            <div class="events-view-btn">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="view-all-events text-center">
-                            <button class="yewello-btn">view all events<span>&rarr;</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- events end -->
 
     <!-- events start -->
     <div id="events" class="events-area events-bg-height pt-100 pb-95"
@@ -343,7 +266,7 @@
                                                     <span class="month">SKS</span>
                                                 </div>
                                                 <div class="events-text-title events-text-title-3">
-                                                    <a href="#">
+                                                    <a href="{{ route('matkul') }}">
                                                         <h4>{{ $mk->nama_matkul }}</h4>
                                                     </a>
                                                     <div class="time-area">
@@ -423,170 +346,6 @@
         </div>
     </div>
     <!-- team end -->
-    <!-- events start -->
-    <div id="events" class="events-area events-bg-height pt-100 pb-95"
-        style="background-image: url( {{ asset('asset/img/courses/courses_bg.png') }} )">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                    <div class="section-title mb-50 text-center">
-                        <div class="section-title-heading mb-20">
-                            <h1 class="white-color">Agenda</h1>
-                        </div>
-                        <div class="section-title-para">
-                            <p class="white-color">Beberapa agenda acara pada Program Studi Informatika yang
-                                akan datang.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="events-list mb-30">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6">
-                        @foreach ($berita as $bt)
-                            <div class="single-events mb-30">
-                                <div class="events-wrapper">
-                                    <div class="events-inner d-flex">
-                                        {{-- <div class="events-thumb">
-                                                <img src=" {{ asset('asset/foto_berita/'. $bt->gambar) }} "
-                                                    alt="" style="">
-                                            </div> --}}
-                                        <div class="events-text white-bg">
-                                            <div class="event-text-heading mb-20">
-                                                <div class="events-calendar text-center f-left">
-                                                    <span class="date">
-                                                        {{ \Carbon\Carbon::parse($bt->published_at)->format('d') }}
-                                                    </span>
-                                                    <span
-                                                        class="month">{{ \Carbon\Carbon::parse($bt->published_at)->translatedFormat('M Y') }}</span>
-                                                </div>
-                                                <div class="events-text-title clearfix">
-                                                    <a href="#">
-                                                        <h4> {{ $bt->judul }}</h4>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="events-para">
-                                                <p> {{ \Illuminate\Support\Str::limit($bt->deskripsi, 120, '...') }}
-                                                </p>
-                                            </div>
-                                            <div class="events-speaker">
-                                                <h2>Speaker : <span>Alexzender</span></h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                        {{-- <div class="single-events mb-30">
-                            <div class="events-wrapper">
-                                <div class="events-inner d-flex">
-                                    <div class="events-thumb">
-                                        <img src="{{ asset('asset/img/events/eventsthumb2.png') }}" alt="">
-                                    </div>
-                                    <div class="events-text white-bg">
-                                        <div class="event-text-heading mb-20">
-                                            <div class="events-calendar text-center f-left">
-                                                <span class="date">25</span>
-                                                <span class="month">Sep, 2018</span>
-                                            </div>
-                                            <div class="events-text-title clearfix">
-                                                <a href="#">
-                                                    <h4>Workshop Marketing</h4>
-                                                </a>
-                                                <div class="time-area">
-                                                    <span class="ti-time"></span>
-                                                    <span class="published-time">05:23 AM - 09:23 AM</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="events-para">
-                                            <p>Event is veries fermentum consequat mi fonec has fermentum ellentesque
-                                                malesuada.</p>
-                                        </div>
-                                        <div class="events-speaker">
-                                            <h2>Speaker : <span>Alexzender</span></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-                    </div>
-                    {{-- <div class="col-xl-6 col-lg-6">
-                        <div class="single-events mb-30">
-                            <div class="events-wrapper">
-                                <div class="events-inner d-flex">
-                                    <div class="events-thumb">
-                                        <img src="{{ asset('asset/img/events/eventsthumb3.png') }}" alt="">
-                                    </div>
-                                    <div class="events-text white-bg">
-                                        <div class="event-text-heading mb-20">
-                                            <div class="events-calendar text-center f-left">
-                                                <span class="date">25</span>
-                                                <span class="month">Sep, 2018</span>
-                                            </div>
-                                            <div class="events-text-title clearfix">
-                                                <a href="#">
-                                                    <h4>Admission Fair 2017</h4>
-                                                </a>
-                                                <div class="time-area">
-                                                    <span class="ti-time"></span>
-                                                    <span class="published-time">05:23 AM - 09:23 AM</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="events-para">
-                                            <p>Event is veries fermentum consequat mi fonec has fermentum ellentesque
-                                                malesuada.</p>
-                                        </div>
-                                        <div class="events-speaker">
-                                            <h2>Speaker : <span>Alexzender</span></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-events mb-30">
-                            <div class="events-wrapper">
-                                <div class="events-inner d-flex">
-                                    <div class="events-thumb">
-                                        <img src=" {{ asset('asset/img/events/eventsthumb4.png') }} " alt="">
-                                    </div>
-                                    <div class="events-text white-bg">
-                                        <div class="event-text-heading mb-20">
-                                            <div class="events-calendar text-center f-left">
-                                                <span class="date">25</span>
-                                                <span class="month">Sep, 2018</span>
-                                            </div>
-                                            <div class="events-text-title clearfix">
-                                                <a href="#">
-                                                    <h4>Learning Spoken English</h4>
-                                                </a>
-                                                <div class="time-area">
-                                                    <span class="ti-time"></span>
-                                                    <span class="published-time">05:23 AM - 09:23 AM</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="events-para">
-                                            <p>Event is veries fermentum consequat mi fonec has fermentum ellentesque
-                                                malesuada.</p>
-                                        </div>
-                                        <div class="events-speaker">
-                                            <h2>Speaker : <span>Alexzender</span></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- events end -->
     <!-- testimonials start -->
     <div class="testimonilas-area pt-100 pb-90">
         <div class="container">

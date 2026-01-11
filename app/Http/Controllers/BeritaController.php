@@ -13,13 +13,6 @@ use function Symfony\Component\Clock\now;
 class BeritaController extends Controller
 {
 
-    public function detailBerita($id)
-    {
-        $berita = Berita::findOrFail($id);
-        return view('layouts.berita.detail-berita', compact('detail_berita'));
-    }
-
-
     public function list_berita()
     {
         $berita = Berita::whereHas('kategori', function ($query) {
@@ -28,6 +21,12 @@ class BeritaController extends Controller
         return view('layouts.berita.berita', compact('berita'));
     }
 
+    public function show($slug)
+    {
+        $berita = Berita::where('slug', $slug)->firstOrFail()->get();
+        $beritaLain = Berita::where('slug', '!=', $slug)->latest()->limit(5)->get();
+        return view('layouts.berita.detail-berita', compact('berita', 'beritaLain'));
+    }
 
     public function list_pengumuman()
     {

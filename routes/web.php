@@ -30,11 +30,11 @@ Route::get('biaya_r', function () {
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('home', [HomeController::class, 'index']);
 Route::get('matkul', [MatkulController::class, 'list_matkul'])->name('matkul');
 Route::get('berita', [BeritaController::class, 'list_berita'])->name('berita');
+Route::get('/berita/read/{slug}', [BeritaController::class, 'show'])->name('berita.show');
 Route::get('agenda', [AgendaController::class, 'list_agenda'])->name('agenda');
-Route::get('/berita/detail/{slug}', [BeritaController::class, 'detailBerita'])->name('detail-berita');
 Route::get('dosen', [DosenController::class, 'list_dosen'])->name('dosen');
 
 

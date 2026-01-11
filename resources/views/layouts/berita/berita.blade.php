@@ -5,10 +5,11 @@
 
     <!-- slider-start -->
     <div class="slider-area">
-        <div class="pages-title">
+        <div class="slider-active">
             <div class="single-slider slider-height slider-height-breadcrumb d-flex align-items-center"
-                style="background-image: url( {{ asset('asset/img/bg/others_bg.jpg') }});">
-                <div class="container">
+                style="background-image: url( {{ asset('asset/img/slider/slide-3.jpg') }});">
+                <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45); z-index:1;"></div>
+                <div class="container" style="position:relative; z-index:2;">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="slider-content slider-content-breadcrumb text-center">
@@ -29,9 +30,10 @@
                         <div class="single-blog blog-wrapper blog-list blog-details blue-blog mb-40">
                             <div class="single-blog-main-content mb-30">
                                 <div class="blog-thumb mb-35 ">
-                                    <a href="" style=" align-items: center; justify-content: center; display: flex;"> 
-                                        <img src="{{ asset('storage/' . $bt->gambar) }}" alt="" style="width:95%; padding-top:10px;  height:auto; object-fit:cover; border-radius:4px;">
-                                        </a>
+                                    <a href="" style=" align-items: center; justify-content: center; display: flex;">
+                                        <img src="{{ asset('storage/' . $bt->gambar) }}" alt=""
+                                            style="width:95%; padding-top:10px;  height:auto; object-fit:cover; border-radius:4px;">
+                                    </a>
                                     {{-- <img src="{{ asset('storage/' . $bt->gambar) }}" alt=""
                                         style="width:95%; padding-top:10px;  height:auto; object-fit:cover; border-radius:4px;"> --}}
 
@@ -44,9 +46,9 @@
                                             {{ \Carbon\Carbon::parse($bt->tgl_berita)->translatedFormat('d F, Y') }}
                                         </span>
                                     </div>
-                                    <h5><a href="{{ route('detail-berita', $bt->slug) }}">{{ $bt->judul }}.</a></h5>
+                                    <h5><a href="{{ route('berita.show', $bt->slug) }}">{{ $bt->judul }}.</a></h5>
                                     <p>{{ \illuminate\Support\Str::limit($bt->deskripsi, 255) }}</p>
-                                    <a href="{{ route('detail-berita', $bt->slug) }}" class="blog-read-more-btn">Read
+                                    <a href="{{ route('berita.show', $bt->slug) }}" class="blog-read-more-btn">Read
                                         more</a>
                                 </div>
                             </div>
@@ -91,7 +93,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="widget mb-40 widget-padding white-bg">
+                        {{-- <div class="widget mb-40 widget-padding white-bg">
                             <h4 class="widget-title">Kategori</h4>
                             <div class="widget-link">
                                 <ul class="sidebar-link">
@@ -125,7 +127,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="widget mb-40 widget-padding white-bg">
                             <h4 class="widget-title">Berita Terbaru</h4>
                             <div class="sidebar-rc-post">
@@ -149,34 +151,6 @@
                                                 </div>
                                             </div>
                                         @endforeach
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="widget mb-40 widget-padding white-bg">
-                            <h4 class="widget-title">Recent Course</h4>
-                            <div class="widget-tags clearfix">
-                                <ul class="sidebar-tad clearfix">
-                                    <li>
-                                        <a href="#">CSE</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Business</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Study</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">English</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Education</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Engineering</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Advisor</a>
                                     </li>
                                 </ul>
                             </div>

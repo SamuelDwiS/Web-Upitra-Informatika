@@ -30,7 +30,7 @@
 
                     <div class="mb-3">
                         <label class="form-label">Deskripsi</label>
-                        <textarea name="deskripsi" class="form-control" cols="20" rows="5" required></textarea>
+                        <textarea name="deskripsi" class="form-control" cols="20" rows="5"></textarea>
                     </div>
 
                     <div class="mb-3">

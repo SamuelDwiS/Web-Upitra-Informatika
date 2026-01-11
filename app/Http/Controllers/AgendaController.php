@@ -12,11 +12,7 @@ class AgendaController extends Controller
         return view('layouts.agenda', compact('agenda'));
     }
 
-    public function detailAgenda($id)
-    {
-        $detail_agenda = Agenda::findOrFail($id);
-        return view('layouts.agenda.detail-agenda', compact('detail_agenda'));
-    }
+    
 
     // Admin Area Controller Methods
     public function index()
@@ -34,7 +30,7 @@ class AgendaController extends Controller
     {
         $request->validate([
             'judul_agenda' => 'required',
-            'slug' => 'required',
+            'slug' => 'required|alpha_dash|unique:tb_agenda,slug',
             'deskripsi' => 'nullable',
             'tanggal_mulai' => 'required|date',
             'lokasi' => 'required',
@@ -53,7 +49,7 @@ class AgendaController extends Controller
             'judul_agenda' => $request->judul_agenda,
             'slug' => $request->slug,
             'deskripsi' => $request->deskripsi,
-            'tanngal_mulai' => $request->tanngal_mulai,
+            'tanggal_mulai' => $request->tanggal_mulai,
             'lokasi' => $request->lokasi,
             'pembicara' => $request->pembicara,
             'gambar_poster' => $path,
@@ -75,14 +71,20 @@ class AgendaController extends Controller
         $request->validate([
             'judul_agenda' => 'required',
             'deskripsi' => 'required',
-            'tanngal_mulai' => 'required|date',
+            'tanggal_mulai' => 'required|date',
             'lokasi' => 'required',
             'pembicara' => 'required',
             'gambar_poster' => 'image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
         $path = $agenda->gambar_poster;
+
         if ($request->hasFile('gambar_poster')) {
+
+            if ($agenda->gambar_poster && file_exists(public_path('storage/' . $agenda->gambar_poster))) {
+                unlink(public_path('storage/' . $agenda->gambar_poster));
+            }
+
             $namaposter = time() . '.' . $request->gambar_poster->extension();
             $request->gambar_poster->move(public_path('storage/agenda'), $namaposter);
             $path = 'agenda/' . $namaposter;
@@ -91,7 +93,7 @@ class AgendaController extends Controller
         $agenda->update([
             'judul_agenda' => $request->judul_agenda,
             'deskripsi' => $request->deskripsi,
-            'tanngal_mulai' => $request->tanngal_mulai,
+            'tanggal_mulai' => $request->tanggal_mulai,
             'lokasi' => $request->lokasi,
             'pembicara' => $request->pembicara,
             'gambar_poster' => $path,
@@ -103,6 +105,9 @@ class AgendaController extends Controller
     public function destroy($id)
     {
         $agenda = Agenda::findOrFail($id);
+        if($agenda->gambar_poster && file_exists(public_path('storage/' . $agenda->gambar_poster))) {
+            unlink(public_path('storage/' . $agenda->gambar_poster));
+        }
         $agenda->delete();
 
         return redirect()->route('admin.agenda.index')->with('success', 'Data Agenda Berhasil Dihapus!');

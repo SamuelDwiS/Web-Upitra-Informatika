@@ -7,6 +7,7 @@ use App\Models\Berita;
 use App\Models\Dosen;
 use App\Models\Matkul;
 use App\Models\Testimoni;
+use App\Models\Agenda;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +21,8 @@ class AdminController extends Controller
         $matkul = Matkul::count();
         $berita = Berita::count();
         $dosen = Dosen::count();
-        return view('admin.dashboard', compact('testimoni', 'matkul', 'berita', 'dosen'));
+        $agenda = Agenda::count();
+        return view('admin.dashboard', compact('testimoni', 'matkul', 'berita', 'dosen', 'agenda'));
     }
 
     public function login()
