@@ -7,6 +7,7 @@ use Illuminate\Validation\Rule;
 use App\Models\Berita;
 use App\Models\Kategori;
 use Illuminate\Support\Str;
+use Illuminate\Pagination\PaginationServiceProvider;
 
 use function Symfony\Component\Clock\now;
 
@@ -17,8 +18,11 @@ class BeritaController extends Controller
     {
         $berita = Berita::whereHas('kategori', function ($query) {
             $query->where('slug', 'berita');
-        })->get();
-        return view('layouts.berita.berita', compact('berita'));
+        })->latest()->paginate(2);
+        $beritaTerbaru = Berita::whereHas('kategori', function ($query) {
+            $query->where('slug', 'berita');
+        })->latest()->limit(5)->get();
+        return view('layouts.berita.berita', compact('berita', 'beritaTerbaru'));
     }
 
     public function show($slug)

@@ -56,8 +56,9 @@
                     @endforeach
                     <div class="row">
                         <div class="col-xl-12">
-                            <nav class="course-pagination mt-10 mb-30" aria-label="Page navigation example">
-                                <ul class="pagination justify-content-start">
+                            <div class="course-pagination mt-10 mb-30" aria-label="Page navigation example">
+                                {{ $berita->links('vendor.pagination.berita-pagination') }}
+                                {{-- <ul class="pagination justify-content-start">
                                     <li class="page-item">
                                         <a class="page-link" href="#"><span class="ti-angle-left"></span></a>
                                     </li>
@@ -76,8 +77,8 @@
                                     <li class="page-item">
                                         <a class="page-link" href="#"><span class="ti-angle-right"></span></a>
                                     </li>
-                                </ul>
-                            </nav>
+                                </ul> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,16 +134,16 @@
                             <div class="sidebar-rc-post">
                                 <ul>
                                     <li>
-                                        @foreach ($berita as $bt)
+                                        @foreach ($beritaTerbaru as $bt)
                                             <div class="sidebar-rc-post-main-area d-flex mb-20">
                                                 <div class="rc-post-thumb">
-                                                    <a href="blog-details.html">
+                                                    <a href="{{ route('berita.show', $bt->slug) }}">
                                                         <img src="img/courses/rcourses_thumb01.png" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="rc-post-content">
                                                     <h4>
-                                                        <a href="blog-details.html"> {{ $bt->judul }}</a>
+                                                        <a href="{{ route('berita.show', $bt->slug) }}"> {{ $bt->judul }}</a>
                                                     </h4>
                                                     <div class="widget-advisors-name">
                                                         <span>Diupload: <span

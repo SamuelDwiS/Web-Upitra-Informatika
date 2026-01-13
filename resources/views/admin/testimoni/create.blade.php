@@ -18,7 +18,7 @@
                 @endif
                 <form action="{{ route('admin.testimoni.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-
+                    @method('POST')
                     <div class="mb-3">
                         <label class="form-label">Nama Alumni</label>
                         <input type="text" name="nm_alumni" class="form-control" required>

@@ -18,7 +18,7 @@
                 @endif
                 <form action="{{ route('admin.dosen.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-
+                    @method('POST')
                     <div class="mb-3">
                         <label class="form-label">NIDN</label>
                         <input type="text" name="NIDN" class="form-control" required>

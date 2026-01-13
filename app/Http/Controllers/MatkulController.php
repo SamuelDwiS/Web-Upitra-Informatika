@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Matkul;
+use Illuminate\Pagination\PaginationServiceProvider;
 
 class MatkulController extends Controller
 {
@@ -11,7 +12,19 @@ class MatkulController extends Controller
     public function list_matkul()
     {
         // $matkul = Matkul::all();
-        $matkul = Matkul::paginate(6);
+        $matkul = Matkul::paginate(4);
+        return view('layouts.matkul', compact('matkul'));
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+
+        $matkul = Matkul::where('nama_matkul', 'like', "%" . $keyword . "%")
+            ->orWhere('kd_matkul', 'like', "%" . $keyword . "%")
+            ->orWhere('sks', 'like', "%" . $keyword . "%")
+            ->orWhere('semester', 'like', "%" . $keyword . "%")
+            ->paginate(4);
         return view('layouts.matkul', compact('matkul'));
     }
 

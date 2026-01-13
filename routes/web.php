@@ -31,7 +31,8 @@ Route::get('biaya_r', function () {
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('home', [HomeController::class, 'index']);
-Route::get('matkul', [MatkulController::class, 'list_matkul'])->name('matkul');
+Route::get('mata-kuliah', [MatkulController::class, 'list_matkul'])->name('matkul');
+Route::get('mata-kuliah/search', [MatkulController::class, 'search'])->name('matkul.search');
 Route::get('berita', [BeritaController::class, 'list_berita'])->name('berita');
 Route::get('/berita/read/{slug}', [BeritaController::class, 'show'])->name('berita.show');
 Route::get('agenda', [AgendaController::class, 'list_agenda'])->name('agenda');

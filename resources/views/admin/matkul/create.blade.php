@@ -18,7 +18,7 @@
                 @endif
             <form action="{{ route('admin.matkul.store') }}" method="POST">
                 @csrf
-
+                @method('POST')
                 <div class="mb-3">
                     <label class="form-label">Kode Matkul</label>
                     <input type="text" name="kd_matkul" class="form-control" required>

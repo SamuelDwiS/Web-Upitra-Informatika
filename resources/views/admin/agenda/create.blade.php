@@ -18,6 +18,7 @@
                 @endif
                 <form action="{{ route('admin.agenda.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('POST')
                     <div class="mb-3">
                         <label class="form-label">Judul</label>
                         <input type="text" name="judul_agenda" id="judul_agenda"  class="form-control" required>

@@ -18,7 +18,7 @@
                 @endif
                 <form action="{{ route('admin.berita.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-
+                    @method('POST')
                     <div class="mb-3">
                         <label class="form-label">Kategori</label>
                         <select class="form-select" name="id_kategori" id="kategori">

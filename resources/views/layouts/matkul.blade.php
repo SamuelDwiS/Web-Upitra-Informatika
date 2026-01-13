@@ -20,8 +20,8 @@
 
                     <div class="widget mb-40 white-bg">
                         <div class="sidebar-form">
-                            <form action="#">
-                                <input placeholder="Cari Mata Kuliah" type="text">
+                            <form action="{{ route('matkul.search') }}" method="GET">
+                                <input placeholder="Cari Mata Kuliah" name="keyword" value="{{ request('keyword') }}" type="text">
                                 <button type="submit">
                                     <i class="ti-search"></i>
                                 </button>
@@ -55,27 +55,8 @@
 
                         <div class="row">
                             <div class="col-xl-12">
-                                <nav class="course-pagination mb-30" aria-label="Page navigation example">
-                                    <ul class="pagination justify-content-start">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#"><span class="ti-angle-left"></span></a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="#">1</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">2</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">3</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">4</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#"><span class="ti-angle-right"></span></a>
-                                        </li>
-                                    </ul>
+                                <nav class="course-pagination mb-30" aria-label="Page navigation example">                                   
+                                    {{ $matkul->links('vendor.pagination.berita-pagination') }}
                                 </nav>
                             </div>
                         </div>
